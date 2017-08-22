@@ -32,7 +32,7 @@ if ( !empty( $images ) ) {
 
     }
     ?>
-    <div class="row" style="background-image:url('<?php echo $image ?>');">
+    <div class="certificates row" style="background-image:url('<?php echo $image ?>');">
 
         <?php
 
@@ -45,7 +45,13 @@ if ( !empty( $images ) ) {
         }
 
 
+
         ?>
+
+        <div class="certificate-img col-md-4"><img src="<?= get_stylesheet_directory_uri() . '/img/blue-certificate.png' ?>" /></div>
+        <div class="certificate-img col-md-4"><img src="<?= get_stylesheet_directory_uri() . '/img/white-certificate.png' ?>" /></div>
+        <div class="certificate-img col-md-4"><img src="<?= get_stylesheet_directory_uri() . '/img/black-certificate.png' ?>" /></div>
+
         <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ); ?></h1>
 
         <div class="scroll-button" href="#down">

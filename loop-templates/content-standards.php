@@ -14,6 +14,8 @@ $class = $prefix.'section';
 <div class="container-fluid <?= $class ?>">
     <div class="row">
         <div class="col-md-6">
+            <div class="inner">
+
             <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ) ?></h1>
             <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead', true ) ?></h2>
             <p><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph', true ) ?></p>
@@ -32,6 +34,7 @@ $class = $prefix.'section';
 
             <div class="scroll-button" href="#down">
                 <div class="triangle"></div>
+            </div>
             </div>
 
         </div>
