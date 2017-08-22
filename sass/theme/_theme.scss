@@ -163,6 +163,26 @@ header {
     width:600px;
   }
 }
+.fl-certificate-section {
+  .image {
+    img {
+      width:50%;
+      margin:auto auto;
+
+    }
+    a {
+      margin:0;
+    }
+  .cta {
+    background: #fff;
+    color: #000;
+    margin: auto auto;
+  }
+  .cert-img {
+    margin: auto auto;
+  }
+  }
+}
 
 .scroll-button {
   @include scrolling_button($brand-primary);

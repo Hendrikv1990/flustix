@@ -1,6 +1,10 @@
 jQuery(document).ready(function () {
 
+
+
     $ = jQuery;
+
+
 
     $('#fullpage').fullpage({
         verticalCentered: true,
@@ -35,5 +39,35 @@ jQuery(document).ready(function () {
     $('.scroll-button').on('click', function () {
         $.fn.fullpage.moveSectionDown();
     });
+
+    /// let' initalize some carousels
+    // each one has the prefix of the section <?= $prefix ?>owl-carousel
+
+    /*
+     fl-goal
+     fl-standards
+     fl-what
+     fl-why
+
+     */
+
+    $('.fl-goal-').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        items:1,
+        autoWidth:false,
+    });
+
+    $('.fl-standards-').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        items:1,
+        autoWidth:false,
+    });
+
+
+
 
 });

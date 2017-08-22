@@ -9314,6 +9314,21 @@ header {
 .fl-world-section img {
   width: 600px; }
 
+.fl-certificate-section .image img {
+  width: 50%;
+  margin: auto auto; }
+
+.fl-certificate-section .image a {
+  margin: 0; }
+
+.fl-certificate-section .image .cta {
+  background: #fff;
+  color: #000;
+  margin: auto auto; }
+
+.fl-certificate-section .image .cert-img {
+  margin: auto auto; }
+
 .scroll-button {
   color: #93C3BB;
   font-size: 25px;

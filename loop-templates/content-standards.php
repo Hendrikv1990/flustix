@@ -20,9 +20,14 @@ $class = $prefix.'section';
 
 
             <!-- // TODO initialize carousel -->
+            <div class="<?= $prefix ?> owl-carousel owl-theme">
+                <div class="item"><?= get_post_meta( get_the_ID(), $prefix.'standards-paragraph-1', true ) ?></div>
+                <div class="item"><?= get_post_meta( get_the_ID(), $prefix.'standards-paragraph-2', true ) ?></div>
+                <div class="item"><?= get_post_meta( get_the_ID(), $prefix.'standards-paragraph-3', true ) ?></div>
+            </div>
 
 
-            <?= get_post_meta(get_the_ID(), $prefix.'url', true) ?>
+
 
 
             <div class="scroll-button" href="#down">
@@ -31,7 +36,7 @@ $class = $prefix.'section';
 
         </div>
         <?php
-        $images = rwmb_meta( $prefix.'overlay-image', 'size=full' ); // Since 4.8.0
+        $images = rwmb_meta( $prefix.'image', 'size=full' ); // Since 4.8.0
 
         if (!empty($images)) {
             foreach ($images as $image) {
@@ -44,13 +49,13 @@ $class = $prefix.'section';
         <div class="col-md-6 image" style="background-image:url('<?php echo $image['url'] ?>');">
 
             <?php
-            $images = rwmb_meta( $prefix.'image', 'size=full' ); // Since 4.8.0
-
+            $images = rwmb_meta( $prefix.'overlay-image', 'size=full' ); // Since 4.8.0
+            $url = get_post_meta( get_the_ID(), $prefix.'url', true);
 
             if ( !empty( $images ) ) {
-                foreach ( $images as $image ) {
-                    //echo '<img src="', esc_url( $image['url'] ), '"  alt="', esc_attr( $image['alt'] ), '">';
-                }
+            foreach ( $images as $image ) {?>
+            <?php  echo '<a href="', esc_url( $url ), '" title="', esc_attr( $image['title'] ), '"><img src="', esc_url( $image['url'] ), '"  alt="', esc_attr( $image['alt'] ), '"></a>';
+            }
             }
 
             ?>
