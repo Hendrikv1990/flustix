@@ -42,7 +42,7 @@ $container = get_theme_mod( 'understrap_container_type' );
             <?php echo get_template_part('loop-templates/content', 'how-it-works'); ?>
         </div>
         <div class="section" id="section6">
-            <?php echo get_template_part('loop-templates/content', 'goals'); ?>
+            <?php echo get_template_part('loop-templates/content', 'goal'); ?>
         </div>
 
             <?php echo get_template_part('loop-templates/content', 'certificates'); ?>

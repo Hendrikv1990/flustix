@@ -144,7 +144,10 @@ header {
 }
 
 .scroll-button {
-  @include scrolling_button()
+  @include scrolling_button();
+  .triangle {
+    @include triangle;
+  }
 }
 
 .navbar-brand.custom-logo-link {
