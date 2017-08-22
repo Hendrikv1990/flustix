@@ -22,7 +22,7 @@ $prefix = 'fl-footer-';
 
                 <div class="col-md-12">
 
-                    <ul class="nav flex-column" style="">
+                    <ul class="nav flex-column" style="text-align: left;">
                         <li class="nav-item">
                             <h2 class="nav-link active" style="font-size: 24px;">KONTAKT :</h2>
                         </li>
@@ -39,10 +39,10 @@ $prefix = 'fl-footer-';
                             <h2 class="nav-link" style="font-size: 24px; margin-bottom: 1px;">FAQ's</h2>
                         </li>
                         <li class="nav-item">
-                            <h2 class="nav-link" style="font-size: 24px; margin-bottom: 1px;">Rechtliche Hinweise</h2>
+                            <h2 class="nav-link" style="font-size: 24px; margin-bottom: 1px;"><a href="/impressum/" style="color: #333;">Rechtliche Hinweise</a></h2>
                         </li>
                         <li class="nav-item">
-                            <h2 class="nav-link" style="font-size: 24px; margin-bottom: 1px;">Datenschutz</h2>
+                            <h2 class="nav-link" style="font-size: 24px; margin-bottom: 1px;"><a href="/datenschutz/" style="color: #333;">Datenschutz</a></h2>
                         </li>
                     </ul>
 
@@ -72,7 +72,14 @@ $prefix = 'fl-footer-';
 
         ?>
         <div class="col-md-6 image" style="background-image:url('<?php echo $image['url'] ?>');">
-
+            <?php ///var_dump(get_stylesheet_directory_url()); ?>
+            <img src="<?php echo get_stylesheet_directory_uri() . '/img/folgeuns.png' ?>" style="width: 520px;height: auto;bottom: 5%;position: fixed;left: 75%;transform: translate(-50%, -50%);">
+            <img src="<?php echo get_stylesheet_directory_uri() . '/img/facebook.png' ?>" style="height: 65px;width: 65px;bottom: 4%; margin-bottom: 35px; position: fixed; left: 60%; transform: translate(-50%, -50%);">
+            <img src="<?php echo get_stylesheet_directory_uri() . '/img/twitter.png' ?>" style="height: 65px;width: 65px;bottom: 4%; margin-bottom: 35px; position: fixed; left: 68%; transform: translate(-50%, -50%);">
+            <img src="<?php echo get_stylesheet_directory_uri() . '/img/instagram.png' ?>" style="height: 65px;width: 65px;bottom: 4%; margin-bottom: 35px; position: fixed; left: 76%; transform: translate(-50%, -50%);">
+            <img src="<?php echo get_stylesheet_directory_uri() . '/img/linkedin.png' ?>" style="height: 65px;width: 65px;bottom: 4%; margin-bottom: 35px; position: fixed; left: 84%; transform: translate(-50%, -50%);">
+            <img src="<?php echo get_stylesheet_directory_uri() . '/img/logo.png' ?>" style="height: 65px;width: 65px;bottom: 4%; margin-bottom: 35px; position: fixed; left: 92%; transform: translate(-50%, -50%);">
+        </div>
             <?php
             $images = rwmb_meta( $prefix.'image', 'size=full' ); // Since 4.8.0
 
