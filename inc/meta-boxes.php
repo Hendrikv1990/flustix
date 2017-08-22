@@ -395,6 +395,11 @@ function fl_get_meta_box( $meta_boxes ) {
                 'name' => esc_html__( 'Standards Paragraph 3', 'metabox-online-generator' ),
             ),
             array(
+                'id' => $prefix . 'standards-image',
+                'type' => 'image_advanced',
+                'name' => esc_html__( 'Standards Image', 'metabox-online-generator' ),
+            ),
+            array(
                 'id' => $prefix . 'standards-overlay-image',
                 'type' => 'image_advanced',
                 'name' => esc_html__( 'Standards Image Button', 'metabox-online-generator' ),

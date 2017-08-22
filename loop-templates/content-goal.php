@@ -22,7 +22,11 @@ $class = $prefix.'section';
 
 
             <!-- // TODO initialize carousel -->
-
+            <div class="<?= $prefix ?> owl-carousel owl-theme">
+                    <div class="item">FLUSTIX zertifiziert komplett plastikfreie Produkte. Möchte ein Hersteller das FLUSTIX-Siegel auf seiner Ware  verwenden, muss das Produkt ein strenges Prüfverfahren durchlaufen. Dieses besteht aus drei Stufen:</div>
+                    <div class="item">FLUSTIX zertifiziert komplett plastikfreie Produkte. Min strenges Prüfverfahren durchlaufen. Dieses besteht aus drei Stufen:</div>
+                    <div class="item">FLUSTIX zertifiziert komplett p-Siegel auf seiner Ware  verwenden, muss das Produkt ein strenges Prüfverfahren durchlaufen. Dieses besteht aus drei Stufen:</div>
+            </div>
 
             <?= get_post_meta(get_the_ID(), $prefix.'url', true) ?>
 
