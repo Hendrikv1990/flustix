@@ -47,7 +47,11 @@ $class = $prefix.'section';
         }
 
         ?>
-        <div class="col-md-6 image" style="background-image:url('<?php echo $image['url'] ?>');">
+        <div class="col-md-6 image" style="">
+            <!-- // background-image:url('<?php echo $image['url'] ?>'); -->
+            <div class="svg">
+            <?php echo file_get_contents($image['url']); ?>
+            </div>
 
             <?php
             $images = rwmb_meta( $prefix.'image', 'size=full' ); // Since 4.8.0
@@ -59,12 +63,11 @@ $class = $prefix.'section';
                 }
             }
 
-//            get_post_meta( get_the_ID(), $prefix.'text-image-1', true );
-//            get_post_meta( get_the_ID(), $prefix.'text-image-2', true );
-//            get_post_meta( get_the_ID(), $prefix.'text-image-3', true );
-
-
             ?>
+
+            <div class="overlay-text how-it-works-overlay-text-1" style="display:none;"><?= get_post_meta( get_the_ID(), $prefix.'text-image-1', true ); ?></div>
+            <div class="overlay-text how-it-works-overlay-text-2" style="display:none;"><?= get_post_meta( get_the_ID(), $prefix.'text-image-2', true ); ?></div>
+            <div class="overlay-text how-it-works-overlay-text-3" style="display:none;"><?= get_post_meta( get_the_ID(), $prefix.'text-image-3', true ); ?></div>
 
 
 

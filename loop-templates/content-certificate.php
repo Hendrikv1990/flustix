@@ -51,12 +51,12 @@ $class = $prefix.'section';
                 }
             }
 
-            $images = rwmb_meta( $prefix.'overlay_image', 'size=full' ); // Since 4.8.0
+            $images = rwmb_meta( $prefix.'overlay-image', 'size=full' ); // Since 4.8.0
             $url = get_post_meta( get_the_ID(), $prefix.'url', true);
 
             if ( !empty( $images ) ) {
                 foreach ( $images as $image ) {
-                    echo '<a href="', esc_url( $url ), '" title="', esc_attr( $image['title'] ), '"><img src="', esc_url( $image['url'] ), '"  alt="', esc_attr( $image['alt'] ), '"></a>';
+                    echo '<div class="cert-img"><img src="', esc_url( $image['url'] ), '"  alt="', esc_attr( $image['alt'] ), '"></div>';
                 }
             }
 
@@ -64,7 +64,7 @@ $class = $prefix.'section';
 
 
             ?>
-            <a class="cta" href="<?= $url ?>"><?= $button_text ?></a>
+            <div class="cta"><a href="<?= $url ?>"><?= $button_text ?></a></div>
 
 
 

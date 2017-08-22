@@ -9314,6 +9314,58 @@ header {
 .fl-world-section img {
   width: 600px; }
 
+.fl-certificate-section .image img {
+  width: 50%;
+  margin: auto auto; }
+
+.fl-certificate-section .image a {
+  margin: 0; }
+
+.fl-certificate-section .image .cta {
+  background: #fff;
+  color: #000;
+  margin: auto auto; }
+
+.fl-certificate-section .image .cert-img {
+  margin: auto auto; }
+
+.fl-how-it-works-section .image {
+  background-color: #93C3BB; }
+
+.certificates.row {
+  width: 75%;
+  margin: 0 auto; }
+
+.certificate-img {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  width: 100%; }
+  .certificate-img img {
+    width: 250px; }
+
+#section9 {
+  background-size: cover; }
+
+.svg {
+  width: 100%; }
+
+.overlay-text {
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  background: #fff;
+  padding: 20px;
+  top: 40%;
+  font-size: 12px; }
+
+.first-hover, .second-hover, .third-hover {
+  -webkit-transition: fill 0.5s ease-out;
+  -moz-transition: fill 0.5s ease-out;
+  -o-transition: fill 0.5s ease-out;
+  transition: fill 0.5s ease-out; }
+  .first-hover:hover, .second-hover:hover, .third-hover:hover {
+    fill: white !important; }
+
 .scroll-button {
   color: #93C3BB;
   font-size: 25px;
@@ -9370,6 +9422,11 @@ header {
 .menu-trigger .icon:before {
   content: "";
   top: -12px;
+  left: 0; }
+
+.menu-trigger .icon:after {
+  content: "";
+  top: -6px;
   left: 0; }
 
 .menu-trigger .icon, .menu-trigger .icon:before, .menu-trigger .icon:after {
@@ -9438,6 +9495,51 @@ h1 {
 * --------------------------------------- */
 video::-webkit-media-controls {
   display: none !important; }
+
+.menu-trigger .icon, .menu-trigger .icon:before, .menu-trigger .icon:after {
+  background: #fff; }
+
+.menu-trigger {
+  color: #fff; }
+
+.menu-trigger.white {
+  color: #fff; }
+
+.menu-trigger.black {
+  color: #000; }
+
+.menu-trigger .icon.black, .menu-trigger .icon.black:before, .menu-trigger .icon.black:after {
+  background: #000; }
+
+.menu-trigger .icon.white, .menu-trigger .icon.white:before, .menu-trigger .icon.white:after {
+  background: #fff; }
+
+.social-media-sidebar {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  background: #fff;
+  display: none; }
+
+.social-media-sidebar fa {
+  color: #000; }
+
+.social-media-sidebar ul {
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 0; }
+
+.social-media-sidebar ul li {
+  font-size: 35px;
+  text-align: center;
+  padding: 5px; }
+
+.social-media-sidebar ul li img {
+  max-width: 30px;
+  max-height: 30px; }
+
+.social-media-sidebar li a:hover {
+  opacity: 0.7; }
 
 /*
 * Use existing Bootstrap 4 classes and
