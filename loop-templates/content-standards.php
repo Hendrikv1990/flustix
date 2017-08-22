@@ -31,7 +31,7 @@ $class = $prefix.'section';
 
         </div>
         <?php
-        $images = rwmb_meta( $prefix.'image', 'size=full' ); // Since 4.8.0
+        $images = rwmb_meta( $prefix.'overlay-image', 'size=full' ); // Since 4.8.0
 
         if (!empty($images)) {
             foreach ($images as $image) {
