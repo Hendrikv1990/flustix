@@ -64,7 +64,7 @@ $class = $prefix.'section';
 
 
             ?>
-<!--            <div class="cta"><a href="--><?//= $url ?><!--">--><?//= $button_text ?><!--</a></div>-->
+            <div class="cta"><a href="<?= $url ?>"><?= $button_text ?></a></div>
 
 
 

@@ -8,10 +8,56 @@ jQuery(document).ready(function () {
 
     $('#fullpage').fullpage({
         verticalCentered: true,
-        sectionsColor: ['#fff', '#fff', '#fff'],
+        sectionsColor: ['#333', '#fff', '#fff'],
 
 
         onLeave: function (index, nextIndex, direction) {
+
+            // we hide the logo after leaving the first index
+
+            if(index == 2 && direction == 'up') {
+                console.log('we are not at the first: hide logo');
+                $('.custom-logo-link').show('slow');
+            }
+
+            if(index == 1 && direction == 'down') {
+                console.log('we are not at the first: hide logo');
+                $('.custom-logo-link').hide('slow');
+            }
+
+            if(nextIndex == 3 && direction == 'down' || nextIndex == 7 && direction == 'down' || nextIndex == 9 && direction == 'down' ){
+                $('.menu-trigger').removeClass('black');
+                $('.menu-trigger .icon').removeClass('black');
+                $('.menu-trigger .icon').addClass('white');
+                $('.menu-trigger').addClass('white');
+
+            }
+            if(nextIndex == 2 && direction == 'down' || nextIndex == 6 && direction == 'down'  || nextIndex == 4 && direction == 'down' || nextIndex == 8 && direction == 'down' || nextIndex == 5 && direction == 'down' || nextIndex == 10 && direction == 'down' || nextIndex == 11 && direction == 'down'){
+                $('.menu-trigger').removeClass('white');
+                $('.menu-trigger .icon').removeClass('white');
+                $('.menu-trigger .icon').addClass('black');
+                $('.menu-trigger').addClass('black');
+
+            }
+
+            if(nextIndex == 3 && direction == 'up' || nextIndex == 7 && direction == 'up' || nextIndex == 9 && direction == 'up' ){
+                $('.menu-trigger').removeClass('black');
+                $('.menu-trigger .icon').removeClass('black');
+                $('.menu-trigger .icon').addClass('white');
+                $('.menu-trigger').addClass('white');
+
+            }
+            if(nextIndex == 2 && direction == 'up' || nextIndex == 6 && direction == 'up' || nextIndex == 4 && direction == 'up' || nextIndex == 8 && direction == 'up' || nextIndex == 5 && direction == 'up' || nextIndex == 10 && direction == 'up' || nextIndex == 11 && direction == 'up'){
+                $('.menu-trigger').removeClass('white');
+                $('.menu-trigger .icon').removeClass('white');
+                $('.menu-trigger .icon').addClass('black');
+                $('.menu-trigger').addClass('black');
+
+            }
+
+
+
+
 
             // TODO move this
             if (index == 2 && direction == "up") {
@@ -33,7 +79,43 @@ jQuery(document).ready(function () {
                 $('.section').removeClass('active-down').removeClass('active-up');
                 $('.section').eq(index - 2).addClass('active-up');
             }
-        }
+        },
+        afterLoad: function(anchorLink, index){
+            $('.section').removeClass('up').removeClass('down');
+            $('.section').eq(index-2).addClass('up');
+            $('.section').eq(index).addClass('down');
+
+            console.log('we are at index with: ');
+            console.log(index);
+
+            if(index >= 2) {
+                console.log('we are not at the first: hide logo');
+                $('.custom-logo-link').hide();
+            } else {
+                $('.custom-logo-link').show();
+            }
+
+            // if(index == 1){
+            //     console.log('entering show logo')
+            //     $('.custom-logo-link').show();
+            // }
+
+
+            // TODO move this
+            if(index == 1) {
+
+
+
+                // remove the social media bar
+                $('.social-media-sidebar').hide();
+
+            }else {
+
+                $('.social-media-sidebar').show();
+            }
+
+
+        },
     });
 
     $('.scroll-button').on('click', function () {
@@ -66,6 +148,44 @@ jQuery(document).ready(function () {
         items:1,
         autoWidth:false,
     });
+
+    $( ".first-hover" )
+        .mouseenter(function() {
+            console.log('moused over first hover');
+
+            $('.how-it-works-overlay-text-1').show();
+        })
+        .mouseleave(function() {
+            console.log('moused out first hover');
+
+            $('.how-it-works-overlay-text-1').hide();
+        });
+
+    $( ".second-hover" )
+        .mouseenter(function() {
+            console.log('moused over second hover');
+
+            $('.how-it-works-overlay-text-2').show();
+        })
+        .mouseleave(function() {
+            console.log('moused out second hover');
+
+            $('.how-it-works-overlay-text-2').hide();
+        });
+
+    $( ".third-hover" )
+        .mouseenter(function() {
+            console.log('moused over third hover');
+
+            $('.how-it-works-overlay-text-3').show();
+        })
+        .mouseleave(function() {
+            console.log('moused out third hover');
+
+            $('.how-it-works-overlay-text-3').hide();
+        });
+
+
 
 
 
