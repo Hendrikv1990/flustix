@@ -11,13 +11,13 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <script type="text/javascript">
-    $ = jQuery;
-    $(document).ready(function() {
-        $('#fullpage').fullpage({
-            verticalCentered: true,
-            sectionsColor: ['#fff', '#fff', '#fff']
-        });
-    });
+//    $ = jQuery;
+//    $(document).ready(function() {
+//        $('#fullpage').fullpage({
+//            verticalCentered: true,
+//            sectionsColor: ['#fff', '#fff', '#fff']
+//        });
+//    });
 </script>
 <div class="wrapper" id="full-width-page-wrapper">
 
@@ -41,18 +41,23 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="section" id="section5">
             <?php echo get_template_part('loop-templates/content', 'how-it-works'); ?>
         </div>
+        <div class="section" id="section6">
+            <?php echo get_template_part('loop-templates/content', 'goals'); ?>
+        </div>
 
             <?php echo get_template_part('loop-templates/content', 'certificates'); ?>
 
-        <div class="section" id="section7">
+        <div class="section" id="section8">
             <?php echo get_template_part('loop-templates/content', 'certificate'); ?>
         </div>
 
             <?php echo get_template_part('loop-templates/content', 'numbers'); ?>
 
-        <div class="section" id="section9">
+        <div class="section" id="section10">
             <?php echo get_template_part('loop-templates/content', 'standards'); ?>
         </div>
+
+
 
             <?php echo get_template_part('loop-templates/content', 'footer'); ?>
     </div>

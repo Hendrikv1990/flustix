@@ -5,6 +5,12 @@
 body {
   font-family:$font-family;
 }
+
+a:hover {
+  color: $brand-primary;
+  text-decoration:none;
+}
+
 .image {
   display:flex;
   background-size: cover;

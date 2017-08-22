@@ -21,9 +21,9 @@ $class = $prefix.'section';
             <p><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph', true ) ?></p>
 
 
-            <div class="scroll-button">
+            <a class="scroll-button" href="#down">
                 <i class="fa fa-caret-down" aria-hidden="true"></i>
-            </div>
+            </a>
 
             </div>
 

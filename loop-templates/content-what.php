@@ -21,6 +21,10 @@ $class = $prefix . 'section';
                 <p><?php echo get_post_meta(get_the_ID(), $prefix . 'paragraph', true) ?></p>
             </div>
 
+            <a class="scroll-button" href="#down">
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </a>
+
         </div>
         <?php
         $images = rwmb_meta($prefix . 'image', 'size=full'); // Since 4.8.0
