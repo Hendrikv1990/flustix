@@ -13,3 +13,7 @@
         <div class="layer">
             <h1>fullPage.js videos</h1>
         </div>
+
+<a class="scroll-button" href="#down">
+    <i class="fa fa-caret-down" aria-hidden="true"></i>
+</a>

@@ -19,7 +19,7 @@ if ( !empty( $images ) ) {
 
 
 ?>
-<div class="section" id="section6" style="background-image:url('<?php echo $image['url'] ?>');">
+<div class="section" id="section7" style="background-image:url('<?php echo $image['url'] ?>');">
 
 <div class="container-fluid <?= $class ?>">
     <?php
@@ -48,7 +48,9 @@ if ( !empty( $images ) ) {
         ?>
         <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ); ?></h1>
 
-        <a href="#certificate" class="scroll-down"><i class="fa fa-icon"></i></a>
+        <a class="scroll-button" href="#down">
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </a>
     </div>
 </div>
 </div>

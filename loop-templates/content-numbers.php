@@ -19,7 +19,7 @@ if ( !empty( $images ) ) {
 
 
 ?>
-<div class="section" id="section8" style="background-image:url('<?php echo $image['url'] ?>');">
+<div class="section" id="section9" style="background-image:url('<?php echo $image['url'] ?>');">
 
 <div class="container-fluid <?= $class ?>">
     <?php
