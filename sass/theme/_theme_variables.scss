@@ -94,24 +94,35 @@ $social-media-icon-size:40px;
   font-size:13px;
   font-weight:bold;
   padding: 12px 40px;
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom:50px;
 }
 
-@mixin scrolling_button(){
-  color: $brand-primary;
+@mixin scrolling_button($color){
+
+  color: $color;
   font-size:25px;
-  border: 4px solid $brand-primary;
+  border: 4px solid $color;
   width: 60px;
   margin: 0 auto;
   height: 60px;
   border-radius: 100%;
   display: flex;
+  cursor:pointer;
+  margin-top: 50px;
+
+  &:hover {
+    opacity:0.8;
+  }
 }
-@mixin triangle(){
+@mixin triangle($color){
   width: 0;
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-top: 15px solid $brand-primary;
+  border-top: 15px solid $color;
   margin: auto;
 }
 
@@ -120,7 +131,7 @@ $social-media-icon-size:40px;
   font-size:$size;
   margin-bottom:30px;
   text-transform:uppercase;
-  width: 50%;
+  width: 60%;
   line-height: 38px;
   margin: 0 auto;
   color:#fff;

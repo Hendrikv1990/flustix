@@ -143,10 +143,31 @@ header {
   }
 }
 
+// fullwidth sections have different properties
+
+.fl-world-section, .fl-certificates-section {
+  img {
+    margin:auto;
+  }
+
+  .scroll-button {
+    @include scrolling_button(#fff);
+    .triangle {
+      @include triangle(#fff);
+    }
+  }
+}
+
+.fl-world-section {
+  img {
+    width:600px;
+  }
+}
+
 .scroll-button {
-  @include scrolling_button();
+  @include scrolling_button($brand-primary);
   .triangle {
-    @include triangle;
+    @include triangle($brand-primary);
   }
 }
 

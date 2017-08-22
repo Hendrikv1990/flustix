@@ -29,9 +29,11 @@ if ( !empty( $images ) ) {
     ?>
     <div class="row">
         <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ); ?></h1>
+    </div>
+    <div class="row">
         <?php
 
-        $images = rwmb_meta( $prefix.'overlay_image', 'size=full' ); // Since 4.8.0
+        $images = rwmb_meta( $prefix.'overlay-image', 'size=full' ); // Since 4.8.0
 
         if ( !empty( $images ) ) {
             foreach ( $images as $image ) {
