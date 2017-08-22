@@ -1,0 +1,112 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
+// Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
+// As example you find one of the most important Bootstrap variable below: $brand-primary.
+// Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
+// Just add your color code here, compile the theme.scss file to change this color everywhere
+$font-family:'Raleway', sans-serif;
+$font-family-sans-serif:Raleway, sans-serif;
+$brand-primary:         #93C3BB; //#ff6d5a
+$border-width: 1.5px;
+$black: #3F3F3F;
+$h1-size: 30px;
+$h2-size: 20px;
+$p-size: 15px;
+$video-header-size: 46.9px;
+$video-subheader-size: 29.3px;
+$numbers-font-size:60px;
+$numbers-subheading:32px;
+$world-subheading:32px;
+
+$social-media-icon-size:40px;
+
+@mixin h1(){
+  &:after {
+    @include border-heading();
+  }
+  font-size:$h1-size;
+  margin-bottom:30px;
+  text-transform:uppercase;
+}
+@mixin h2(){
+  text-transform:uppercase;
+  font-size:$h2-size;
+  margin-bottom:20px;
+}
+@mixin p(){
+  font-size:$p-size;
+  margin-bottom:20px;
+  font-weight:600;
+}
+
+@mixin border-heading() {
+  padding-bottom: 2px;
+  background: none repeat scroll 0 0 #3f3f3f;
+  bottom: -10px;
+  content: "";
+  display: block;
+  height: 1px;
+  position: relative;
+  width: 80px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+// 419 px
+//538 px
+@mixin certificate_sizes(){
+  width:419px;
+  height:538px;
+}
+
+@mixin certificate_sizes(){
+  width:562px;
+  height:724px;
+}
+
+@mixin cta_sizes {
+  width:562px;
+  height:105px;
+}
+
+@mixin social_media_sizes($size){
+  width:40px;
+  height:40px;
+}
+
+@mixin social_media_block(){
+  width:90px;
+  height:325px;
+}
+
+@mixin world_width(){
+  width:1105px;
+  height:576px;
+}
+
+@mixin section_padding(){
+  padding:40px;
+}
+
+@mixin button($border-width, $brand-primary){
+  color: $brand-primary;
+  border: $border-width solid $brand-primary;
+  text-transform:uppercase;
+  font-size:13px;
+  font-weight:bold;
+  padding:20px 10px;
+}
+
+@mixin scrolling_button(){
+  color: $brand-primary;
+  font-size:25px;
+  border: 4 solid $brand-primary;
+}
+@mixin big_heading($size){
+  font-size:$size;
+  margin-bottom:30px;
+  text-transform:uppercase;
+  width: 50%;
+  line-height: 38px;
+  margin: 0 auto;
+  color:#fff;
+}

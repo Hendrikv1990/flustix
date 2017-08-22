@@ -1,0 +1,261 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+@import url('https://fonts.googleapis.com/css?family=Railway:200,300,400,500,600');
+
+body {
+  font-family:$font-family;
+}
+.image {
+  display:flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  a {
+    margin: auto auto;
+  }
+  img {
+    width:345px;
+  }
+}
+
+
+
+.inner {
+  text-align: center;
+  padding: 15% 5%;
+  transition: all .3s ease;
+  width: 100%;
+}
+#section3, #section10, #section8, #section6 {
+  background-size: cover;
+}
+
+.overlay {
+  //background-size: 300px 300px;
+  //background-repeat: no-repeat;
+  //margin: 0 auto;
+  ////position: absolute;
+  //width: 300px;
+  //display: block;
+  //height: 300px;
+  //top: 32%;
+  //left: 0;
+  //right: 0;
+  //cursor: pointer;
+}
+
+.signup .overlay {
+  background-size: 300px 477px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  position: absolute;
+  width: 300px;
+  display: block;
+  height: 477px;
+  top: 20%;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+}
+.signup .overlay:hover {
+  opacity:0.9;
+
+}
+.wrapper {
+  padding:0px;
+  z-index: 0;
+}
+header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background: #1a1919;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  z-index: 1000;
+  padding: 75px 120px;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  transition: all .8s cubic-bezier(0.77,0,.175,1);
+}
+.section h1 {
+  color:#333;
+}
+.section h2 {
+  color:#333;
+}
+.section p {
+  color:#333;
+}
+
+.section {
+  color:$black;
+  .col-md-6:first-child {
+    @include section_padding();
+  }
+}
+.fl-button {
+  @include button($border-width, $brand-primary);
+}
+
+.section .col-md-6:first-child {
+  h1 {
+    @include h1();
+  }
+  h2 {
+    @include h2();
+  }
+  p {
+    @include p();
+  }
+}
+
+.fl-world-section, .fl-certificates-section {
+  h1 {
+    @include big_heading($world-subheading)
+  }
+}
+.fl-numbers-section {
+  h1 {
+    @include big_heading($numbers-subheading)
+  }
+}
+.fl-numbers-section {
+  h1 {
+    @include big_heading($numbers-subheading)
+  }
+}
+.fl-certificates-section {
+  h1 {
+    @include big_heading($numbers-subheading);
+    width:100%!important;
+    line-height: 50px!important;
+  }
+}
+
+.scroll-button {
+  @include scrolling_button()
+}
+
+.navbar-brand.custom-logo-link {
+  z-index: 10000;
+  display: block;
+  position: absolute;
+  display:block;
+  right:0;
+  padding:0px;
+  img {
+    width:50%;
+  }
+}
+.menu-trigger {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(207, 192, 164, 0);
+  text-transform: uppercase;
+  font-size: 21px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  padding: 14px 18px 14px 52px;
+}
+
+.menu-trigger .icon {
+  top: 33px;
+  left: 24px;
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  background: #000;
+}
+
+.menu-trigger .icon:before {
+  content: "";
+  top: -12px;
+  left: 0;
+}
+.menu-trigger .icon, .menu-trigger .icon:before, .menu-trigger .icon:after {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  background: #000;
+}
+
+/* Style for our header texts
+       * --------------------------------------- */
+h1{
+  font-size: 5em;
+  padding:0;
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+  text-align:center;
+  overflow: hidden;
+}
+
+#myVideo{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top:0;
+  right:0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: black; /* in case the video doesn't fit the whole page*/
+  //background-image: /* our video */;
+  background-position: center center;
+  background-size: contain;
+  object-fit: cover; /*cover video background */
+  z-index:3;
+}
+
+
+
+/* Layer with position absolute in order to have it over the video
+* --------------------------------------- */
+#section0 .layer{
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  left: 0;
+  top: 43%;
+
+  /*
+  * Preventing flicker on some browsers
+  * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+  */
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+/*solves problem with overflowing video in Mac with Chrome */
+#section0{
+  overflow: hidden;
+}
+
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu li a {
+  color: #fff;
+}
+
+
+/* Hiding video controls
+* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+* --------------------------------------- */
+video::-webkit-media-controls {
+  display:none !important;
+}
