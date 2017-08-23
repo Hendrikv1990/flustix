@@ -25,7 +25,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
     <div id="fullpage">
         <div class="section row" id="section0">
-            <?php //echo get_template_part('loop-templates/content', 'video'); ?>
+            <?php echo get_template_part('loop-templates/content', 'video'); ?>
         </div>
 <!--        <div class="section" id="section1">-->
 <!--            <div class="slide" id="slide1"><h1>Slide Backgrounds</h1></div>-->

@@ -56,7 +56,7 @@ $class = $prefix.'section';
 
             if ( !empty( $images ) ) {
                 foreach ( $images as $image ) {
-                    echo '<div class="cert-img"><img src="', esc_url( $image['url'] ), '"  alt="', esc_attr( $image['alt'] ), '"></div>';
+                    echo '<div class="cert-img"><a href="'.$url.'" target="_blank"><img src="', esc_url( $image['url'] ), '"  alt="', esc_attr( $image['alt'] ), '"></a></div>';
                 }
             }
 
@@ -64,8 +64,6 @@ $class = $prefix.'section';
 
 
             ?>
-            <div class="cta"><a href="<?= $url ?>"><?= $button_text ?></a></div>
-
 
 
 

@@ -27,6 +27,10 @@ a:hover {
 }
 
 
+#section0 {
+  @include video_background();
+}
+
 
 .inner {
   text-align: center;
@@ -34,7 +38,7 @@ a:hover {
   transition: all .3s ease;
   width: 100%;
 }
-#section3, #section10, #section8, #section6 {
+#section3, #section10, #section8, #section6, #section0 {
   background-size: cover;
 }
 
@@ -97,6 +101,15 @@ header {
 .section p {
   color:#333;
 }
+.overlay-video {
+  position: relative;
+  margin-left: 50%;
+  margin-top: 30%;
+  width: 100%;
+  text-align:center;
+
+}
+
 
 .section {
   color:$black;
@@ -126,8 +139,16 @@ header {
   }
 }
 .fl-numbers-section {
+  h1.main {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  h1.sub {
+    line-height:1.2;
+  }
   h1 {
     @include big_heading($numbers-subheading)
+
   }
 }
 .fl-numbers-section {
@@ -211,13 +232,16 @@ header {
 .svg { width: 100%}
 
 .overlay-text {
-  display:none;
+  display: none;
   z-index: 1000;
   position: absolute;
-  background: #fff;
+  background: transparent;
   padding: 20px;
-  top: 40%;
-  font-size: 12px;
+  top: 40vh;
+  max-width: 30vw;
+  font-size: 0.75em;
+  left: 23%;
+  margin: 0 auto;
 }
 
 .first-hover, .second-hover, .third-hover {
@@ -231,7 +255,9 @@ header {
 }
 
 
-
+.owl-carousel.owl-theme .owl-dots {
+  @include carousel_thumbs();
+}
 
 .scroll-button {
   @include scrolling_button($brand-primary);
@@ -403,12 +429,21 @@ video::-webkit-media-controls {
 .social-media-sidebar ul li {
   font-size: 35px;
   text-align: center;
-  padding: 5px;
+  padding: 3px;
 }
 .social-media-sidebar ul li img {
-  max-width:30px;
-  max-height:30px;
+  max-width:25px;
+  max-height:25px;
 }
 .social-media-sidebar li a:hover {
   opacity:0.7;
+}
+
+.footer-bottom {
+  .nav-item {
+    bottom: 30px;
+    position: fixed;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
 }

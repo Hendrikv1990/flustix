@@ -16,26 +16,35 @@ $class = $prefix.'section';
     <div class="row">
         <div class="col-md-6">
             <div class="inner">
-            <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ) ?></h1>
-            <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead', true ) ?></h2>
-            <p><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph', true ) ?></p>
+                <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ) ?></h1>
+                <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead', true ) ?></h2>
+                <p><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph', true ) ?></p>
 
 
 
-            <!-- // TODO initialize carousel -->
-            <div class="<?= $prefix ?> owl-carousel owl-theme">
-                    <div class="item">FLUSTIX zertifiziert komplett plastikfreie Produkte. Möchte ein Hersteller das FLUSTIX-Siegel auf seiner Ware  verwenden, muss das Produkt ein strenges Prüfverfahren durchlaufen. Dieses besteht aus drei Stufen:</div>
-                    <div class="item">FLUSTIX zertifiziert komplett plastikfreie Produkte. Min strenges Prüfverfahren durchlaufen. Dieses besteht aus drei Stufen:</div>
-                    <div class="item">FLUSTIX zertifiziert komplett p-Siegel auf seiner Ware  verwenden, muss das Produkt ein strenges Prüfverfahren durchlaufen. Dieses besteht aus drei Stufen:</div>
+
+
+                <!-- // TODO initialize carousel -->
+                <div class="<?= $prefix ?> owl-carousel owl-theme">
+                        <div class="item"><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph-1', true ) ?></div>
+                        <div class="item"><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph-2', true ) ?></div>
+                        <div class="item"><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph-3', true ) ?></div>
+                </div>
+
+
+                <a class="fl-button" href="<?php echo get_post_meta( get_the_ID(), $prefix.'url', true ); ?>">
+                    DER VERBRAUCHER
+                </a>
+
+                <div class="scroll-button">
+                    <div class="triangle"></div>
+                </div>
+
             </div>
 
+    </div>
 
-            <div class="scroll-button">
-                <div class="triangle"></div>
-            </div>
-
-            </div>
-                </div><?php
+        <?php
         $images = rwmb_meta( $prefix.'image', 'size=full' ); // Since 4.8.0
         if (!empty($images)) {
         foreach ($images as $image) {

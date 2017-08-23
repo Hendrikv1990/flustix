@@ -23,9 +23,9 @@ $class = $prefix.'section';
 
             <!-- // TODO initialize carousel -->
             <div class="<?= $prefix ?> owl-carousel owl-theme">
-                <div class="item"><?= get_post_meta( get_the_ID(), $prefix.'standards-paragraph-1', true ) ?></div>
-                <div class="item"><?= get_post_meta( get_the_ID(), $prefix.'standards-paragraph-2', true ) ?></div>
-                <div class="item"><?= get_post_meta( get_the_ID(), $prefix.'standards-paragraph-3', true ) ?></div>
+                <div class="item"><?= get_post_meta( get_the_ID(), $prefix.'paragraph-1', true ) ?></div>
+                <div class="item"><?= get_post_meta( get_the_ID(), $prefix.'paragraph-2', true ) ?></div>
+                <div class="item"><?= get_post_meta( get_the_ID(), $prefix.'paragraph-3', true ) ?></div>
             </div>
 
 

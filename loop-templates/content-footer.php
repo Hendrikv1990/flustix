@@ -9,7 +9,7 @@
 $prefix = 'fl-footer-';
 
 ?>
-<div class="section" id="section10" style="background-image:url('<?php echo $image['url'] ?>');">
+<div class="section <?= $prefix?>section" id="section10">
     <div class="container-fluid">
         <div class="row">
 
@@ -21,6 +21,7 @@ $prefix = 'fl-footer-';
 
 
                 <div class="col-md-12">
+                    <div class="inner">
 
                     <ul class="nav flex-column" style="text-align: left;">
                         <li class="nav-item">
@@ -45,13 +46,14 @@ $prefix = 'fl-footer-';
                             <h2 class="nav-link" style="font-size: 24px; margin-bottom: 1px;"><a href="/datenschutz/" style="color: #333;">Datenschutz</a></h2>
                         </li>
                     </ul>
+                    </div>
 
                 </div>
 
                 <div class="col-md-12">
-                    <ul class="nav">
+                    <ul class="nav footer-bottom">
                         <li class="nav-item">
-                            <a style="bottom: 15px; position: fixed; left: 25%; transform: translate(-50%, -50%); ">&copy; FLUSTIX GmbH 2017</a>
+                            <a style="">&copy; FLUSTIX GmbH 2017</a>
                         </li>
 
                     </ul>
@@ -80,16 +82,6 @@ $prefix = 'fl-footer-';
             <img src="<?php echo get_stylesheet_directory_uri() . '/img/linkedin.png' ?>" style="height: 65px;width: 65px;bottom: 4%; margin-bottom: 35px; position: fixed; left: 84%; transform: translate(-50%, -50%);">
             <img src="<?php echo get_stylesheet_directory_uri() . '/img/logo.png' ?>" style="height: 65px;width: 65px;bottom: 4%; margin-bottom: 35px; position: fixed; left: 92%; transform: translate(-50%, -50%);">
         </div>
-            <?php
-            $images = rwmb_meta( $prefix.'image', 'size=full' ); // Since 4.8.0
-
-
-            if ( !empty( $images ) ) {
-
-                $image = $images[0]['url'];
-
-            }
-            ?>
         </div>
         </div>
     </div>

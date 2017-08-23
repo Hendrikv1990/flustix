@@ -40,6 +40,31 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #page -->
 
+<div class="social-media-sidebar">
+    <ul>
+        <li>
+
+            <a href=""><img src="<?= get_stylesheet_directory_uri() . '/img/sidebar/facebook.png' ?>" /></a>
+        </li>
+        <li>
+            <a href=""><img src="<?= get_stylesheet_directory_uri() . '/img/sidebar/twitter.png' ?>" /></a>
+        </li>
+        <li>
+            <a href=""><img src="<?= get_stylesheet_directory_uri() . '/img/sidebar/instagram.png' ?>" /></a>
+        </li>
+        <li>
+            <a href=""><img src="<?= get_stylesheet_directory_uri() . '/img/sidebar/man-user.png' ?>" /></a>
+        </li>
+    </ul>
+
+
+
+
+
+
+
+</div>
+
 <script>
     function openLink(link){
         console.log( link+' link clicked');
