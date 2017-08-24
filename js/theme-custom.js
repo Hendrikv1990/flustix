@@ -26,33 +26,20 @@ jQuery(document).ready(function () {
             }
 
             if(nextIndex == 3 && direction == 'down' || nextIndex == 7 && direction == 'down' || nextIndex == 9 && direction == 'down' ){
-                $('.menu-trigger').removeClass('black');
-                $('.menu-trigger .icon').removeClass('black');
-                $('.menu-trigger .icon').addClass('white');
-                $('.menu-trigger').addClass('white');
+                $('.hamburger.is-closed').removeClass('black');
 
             }
             if(nextIndex == 2 && direction == 'down' || nextIndex == 6 && direction == 'down'  || nextIndex == 4 && direction == 'down' || nextIndex == 8 && direction == 'down' || nextIndex == 5 && direction == 'down' || nextIndex == 10 && direction == 'down' || nextIndex == 11 && direction == 'down'){
-                $('.menu-trigger').removeClass('white');
-                $('.menu-trigger .icon').removeClass('white');
-                $('.menu-trigger .icon').addClass('black');
-                $('.menu-trigger').addClass('black');
+                $('.hamburger.is-closed').addClass('black');
 
             }
 
             if(nextIndex == 3 && direction == 'up' || nextIndex == 7 && direction == 'up' || nextIndex == 9 && direction == 'up' ){
-                $('.menu-trigger').removeClass('black');
-                $('.menu-trigger .icon').removeClass('black');
-                $('.menu-trigger .icon').addClass('white');
-                $('.menu-trigger').addClass('white');
+                $('.hamburger.is-closed').removeClass('black');
 
             }
             if(nextIndex == 2 && direction == 'up' || nextIndex == 6 && direction == 'up' || nextIndex == 4 && direction == 'up' || nextIndex == 8 && direction == 'up' || nextIndex == 5 && direction == 'up' || nextIndex == 10 && direction == 'up' || nextIndex == 11 && direction == 'up'){
-                $('.menu-trigger').removeClass('white');
-                $('.menu-trigger .icon').removeClass('white');
-                $('.menu-trigger .icon').addClass('black');
-                $('.menu-trigger').addClass('black');
-
+                $('.hamburger.is-closed').addClass('black');
             }
 
 
@@ -61,10 +48,7 @@ jQuery(document).ready(function () {
 
             // TODO move this
             if (index == 2 && direction == "up") {
-                $('.menu-trigger .icon').addClass('white');
-                $('.menu-trigger').addClass('white');
-                $('.menu-trigger').removeClass('black');
-                $('.menu-trigger .icon').removeClass('black');
+                $('.hamburger.is-closed').removeClass('black');
 
                 // remove the social media area
                 $('.social-media-sidebar').hide();
@@ -186,6 +170,34 @@ jQuery(document).ready(function () {
         });
 
 
+    var trigger = $('.hamburger'),
+        overlay = $('.overlay'),
+        isClosed = false;
+
+    trigger.click(function () {
+        hamburger_cross();
+    });
+
+    function hamburger_cross() {
+
+        if (isClosed == true) {
+            overlay.hide();
+            trigger.removeClass('is-open');
+            trigger.addClass('is-closed');
+            isClosed = false;
+        } else {
+            overlay.show();
+            trigger.removeClass('is-closed');
+            trigger.addClass('is-open');
+            isClosed = true;
+        }
+    }
+
+    $('[data-toggle="offcanvas"]').click(function () {
+        $('#full-width-page-wrapper').toggleClass('toggled');
+    });
+
+
 
 
 
@@ -226,6 +238,9 @@ jQuery(document).ready(function () {
                 'big-background-default-image');
         }
     });
+
+
+
 
 
 })(jQuery);

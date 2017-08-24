@@ -81,7 +81,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         "nur 45% des Plastikmülls in Deutschland recycelt werden?"
     ];
     var counter = 0;
-    var elem = jQuery('.overlay-video p');
+    var elem = jQuery('.big-background-container p');
     setInterval(change, 5000);
 
     function change() {

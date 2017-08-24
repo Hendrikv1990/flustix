@@ -20,11 +20,12 @@ $class = $prefix.'section';
             <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ) ?></h1>
             <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead', true ) ?></h2>
             <p><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph', true ) ?></p>
+                <div class="scroll-button" href="#down">
+                    <div class="triangle"></div>
+                </div>
             </div>
 
-            <div class="scroll-button" href="#down">
-                <div class="triangle"></div>
-            </div>
+
         </div><?php
         $images = rwmb_meta( $prefix.'image', 'size=full' ); // Since 4.8.0
 
