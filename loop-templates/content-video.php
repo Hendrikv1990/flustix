@@ -10,7 +10,9 @@ $prefx = 'fl-video-'
 ?>
 
 <section class="big-background">
-    <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=ghgEqGjiIB0&feature=youtu.be',containment:'#section0',autoPlay:true, mute:true, startAt:0, opacity:1, mobileFallbackImage:'<?php echo get_stylesheet_directory_uri() . '/img/video-background.jpg' ?>', showControls:false, loop:true, showYTLogo:false, quality:'medium'}"></a>
+<!--    <div id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/BsekcY04xvQ',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}"></div>-->
+
+    <a id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/ghgEqGjiIB0',containment:'#section0',autoPlay:true, mute:true, startAt:0, opacity:1, mobileFallbackImage:'<?php echo get_stylesheet_directory_uri() . '/img/video-background.jpg' ?>', showControls:false, loop:true, showYTLogo:false, quality:'medium', optimizeDisplay:true}"></a>
     <div class="pattern"></div>
     <div class="big-background-container">
             <h1 class="big-background-title"><?php echo get_post_meta(get_the_ID(), 'fl-videohead', true) ?></h1>
