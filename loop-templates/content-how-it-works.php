@@ -18,14 +18,24 @@ $class = $prefix.'section';
         <div class="col-md-6">
             <div class="inner">
 
-            <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ) ?></h1>
-            <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead', true ) ?></h2>
-            <p><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph', true ) ?></p>
+                <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ) ?></h1>
 
-                <a class="fl-button" href="<?php echo get_post_meta( get_the_ID(), $prefix.'button-link', true ) ?>">
-                    <?php echo get_post_meta( get_the_ID(), $prefix.'button-text', true ) ?>
+                <!-- // TODO initialize carousel -->
+                <div class="<?= $prefix ?> owl-carousel owl-theme">
+                    <div class="item">
+                        <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-1', true ) ?></h2>
+                        <?= get_post_meta( get_the_ID(), $prefix.'paragraph-1', true ) ?>
+                    </div>
+                    <div class="item">
+                        <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-2', true ) ?></h2>
+                        <?= get_post_meta( get_the_ID(), $prefix.'paragraph-2', true ) ?>
+                    </div>
+                </div>
+
+
+                <a class="fl-button activate-<?= $prefix ?>" href="#">
+                    <?= get_post_meta( get_the_ID(), $prefix.'button-text', true ) ?> <i class="fa fa-chevron-right"></i>
                 </a>
-
 
                 <div class="scroll-button" href="#down">
                     <div class="triangle"></div>
@@ -46,11 +56,13 @@ $class = $prefix.'section';
             }
         }
 
+        $svg = get_stylesheet_directory_uri() . '/img/graphic_how_it_works.svg';
+
         ?>
         <div class="col-md-6 image" style="">
             <!-- // background-image:url('<?php echo $image['url'] ?>'); -->
             <div class="svg">
-            <?php echo file_get_contents($image['url']); ?>
+            <?php echo file_get_contents($svg); ?>
             </div>
 
             <?php
@@ -64,6 +76,10 @@ $class = $prefix.'section';
             }
 
             ?>
+
+            <h4 class="svg-text position-svg-1">1. Flustix</h4>
+            <h4 class="svg-text position-svg-2">3. Markt</h4>
+            <h4 class="svg-text position-svg-3">2. Labor</h4>
 
             <div class="overlay-text how-it-works-overlay-text-1" style="display:none;"><?= get_post_meta( get_the_ID(), $prefix.'text-image-1', true ); ?></div>
             <div class="overlay-text how-it-works-overlay-text-2" style="display:none;"><?= get_post_meta( get_the_ID(), $prefix.'text-image-2', true ); ?></div>

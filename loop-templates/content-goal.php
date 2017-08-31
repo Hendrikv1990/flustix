@@ -16,24 +16,29 @@ $class = $prefix.'section';
     <div class="row">
         <div class="col-md-6">
             <div class="inner">
+
                 <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ) ?></h1>
-                <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead', true ) ?></h2>
-                <p><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph', true ) ?></p>
-
-
-
-
 
                 <!-- // TODO initialize carousel -->
                 <div class="<?= $prefix ?> owl-carousel owl-theme">
-                        <div class="item"><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph-1', true ) ?></div>
-                        <div class="item"><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph-2', true ) ?></div>
-                        <div class="item"><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph-3', true ) ?></div>
+
+                        <div class="item">
+
+                            <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-1', true ) ?></h2>
+
+
+                        <p><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph-1', true ) ?></p>
+
+                        </div>
+                        <div class="item">
+                            <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-2', true ) ?></h2>
+                            <p><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph-2', true ) ?></p>
+                        </div>
                 </div>
 
 
-                <a class="fl-button" href="<?php echo get_post_meta( get_the_ID(), $prefix.'url', true ); ?>">
-                    DER VERBRAUCHER
+                <a class="fl-button activate-slider" href="#">
+                    <?php echo get_post_meta( get_the_ID(), $prefix.'button-text', true ) ?> <i class="fa fa-chevron-right"></i>
                 </a>
 
                 <div class="scroll-button">

@@ -75,7 +75,7 @@ $full-height: 100%;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
-  background: #1a1a1a;
+  background: $brand-primary;
   height: $full-height;
   margin-left: -220px;
   overflow-x: hidden;
@@ -129,7 +129,7 @@ $full-height: 100%;
     position: relative;
     width: $full-width;
     &:before {
-      background-color: #1c1c1c;
+      background-color: #fff;
       content: '';
       height: $full-height;
       left: 0;
@@ -141,7 +141,7 @@ $full-height: 100%;
     }
     &:first-child {
       a {
-        background-color: $side-color-1;
+        background-color: $brand-primary;
         color: #ffffff;
       }
     }
@@ -192,7 +192,7 @@ $full-height: 100%;
       }
     }
     a {
-      color: #dddddd;
+      color: #fff;
       display: block;
       padding: 20px 20px;
       padding: 20px 20px;
@@ -282,6 +282,9 @@ $full-height: 100%;
 .hamburger.is-closed.black {
   .hamb-top, .hamb-bottom, .hamb-middle {
     background:$black!important;
+  }
+  .menu-name {
+    color:#333;
   }
 }
 .hamburger.is-closed {

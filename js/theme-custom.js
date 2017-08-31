@@ -8,6 +8,7 @@ jQuery(document).ready(function () {
 
     $('#fullpage').fullpage({
         verticalCentered: true,
+        anchors:['start', 'worum', 'weltweit', 'was', '3-stufen', 'ziel', 'siegel', 'bewerben', 'plastik', 'standards', 'kontakt'],
         sectionsColor: ['transparent', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
 
 
@@ -79,6 +80,22 @@ jQuery(document).ready(function () {
                 $('.custom-logo-link').show();
             }
 
+            if(index == 9){
+                var options = {
+                    useEasing: true,
+                    useGrouping: true,
+                    separator: ',',
+                    decimal: '.',
+                };
+                var numbers = jQuery('#numbers').data('numbers');
+                var demo = new CountUp('prettyCounter', 0, numbers, 0, 2, options);
+                if (!demo.error) {
+                    demo.start();
+                } else {
+                    console.error(demo.error);
+                }
+            }
+
             // if(index == 1){
             //     console.log('entering show logo')
             //     $('.custom-logo-link').show();
@@ -133,40 +150,65 @@ jQuery(document).ready(function () {
         autoWidth:false,
     });
 
-    $( ".first-hover" )
-        .mouseenter(function() {
-            console.log('moused over first hover');
+    $('.fl-certificate-').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        items:1,
+        autoWidth:false,
+    });
 
-            $('.how-it-works-overlay-text-1').show();
+    $('.fl-how-it-works-').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        items:1,
+        autoWidth:false,
+    });
+
+
+
+    $( ".default-show" )
+        .mouseenter(function() {
+
         })
         .mouseleave(function() {
-            console.log('moused out first hover');
+
+        });
+
+    $( ".first-hover" )
+        .mouseenter(function() {
+
+            $('.how-it-works-overlay-text-1').show();
+            $('.default-show').hide();
+            $('.how-it-works-overlay-text-3').hide();
+        })
+        .mouseleave(function() {
 
             $('.how-it-works-overlay-text-1').hide();
+            $('.default').hide();
         });
 
     $( ".second-hover" )
         .mouseenter(function() {
-            console.log('moused over second hover');
 
             $('.how-it-works-overlay-text-2').show();
+            $('.default-show').hide();
+            $('.how-it-works-overlay-text-3').hide();
         })
         .mouseleave(function() {
-            console.log('moused out second hover');
 
             $('.how-it-works-overlay-text-2').hide();
+            $('.how-it-works-overlay-text-3').hide();
         });
 
     $( ".third-hover" )
         .mouseenter(function() {
-            console.log('moused over third hover');
-
+            $('.default-show').hide();
             $('.how-it-works-overlay-text-3').show();
+            $('.default').hide();
         })
         .mouseleave(function() {
-            console.log('moused out third hover');
-
-            $('.how-it-works-overlay-text-3').hide();
         });
 
 
@@ -197,6 +239,32 @@ jQuery(document).ready(function () {
         $('#full-width-page-wrapper').toggleClass('toggled');
     });
 
+    var owl = $('.fl-goal-');
+    owl.owlCarousel();
+    $('.activate-slider').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+
+
+    var owlstandards = $('.fl-standards-');
+    owlstandards.owlCarousel();
+    $('.activate-fl-standards-').click(function() {
+        owlstandards.trigger('next.owl.carousel');
+    })
+
+
+    var owlcertificate = $('.fl-certificate-');
+    owlcertificate.owlCarousel();
+    $('.activate-fl-certificate-').click(function() {
+        owlcertificate.trigger('next.owl.carousel');
+    })
+
+    var owlhowto = $('.fl-how-it-works-');
+    owlhowto.owlCarousel();
+    $('.activate-fl-how-it-works-').click(function() {
+        owlhowto.trigger('next.owl.carousel');
+    })
+
 
 
 
@@ -209,6 +277,17 @@ jQuery(document).ready(function () {
 
 (function($) {
     $(document).ready(function() {
+
+
+        $.fn.extend({
+            animateCss: function (animationName) {
+                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                this.addClass('animated ' + animationName).one(animationEnd, function() {
+                    $(this).removeClass('animated ' + animationName);
+                });
+                return this;
+            }
+        });
 
         /* IF YOU WANT TO APPLY SOME BASIC JQUERY TO REMOVE THE VIDEO BACKGROUND ON A SPECIFIC VIEWPORT MANUALLY
 

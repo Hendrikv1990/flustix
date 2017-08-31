@@ -20,6 +20,9 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 
 
         wp_enqueue_script( 'jquery' );
+        wp_enqueue_script( 'morph-scripts', get_template_directory_uri() . '/js/morphext.min.js', array(), false);
+        wp_enqueue_script( 'countUp-scripts', get_template_directory_uri() . '/js/countUp.min.js', array(), false);
+
         wp_enqueue_script( 'carousel-scripts', get_template_directory_uri() . '/js/owl.carousel.js', array(), false);
         wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), false);
         wp_enqueue_script( 'scrolloverflow-scripts', get_template_directory_uri() . '/js/scrolloverflow.js', array(), false);

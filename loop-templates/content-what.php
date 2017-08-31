@@ -50,7 +50,7 @@ $class = $prefix . 'section';
 
             if ( !empty( $images ) ) {
                 foreach ( $images as $image ) {?>
-                    <?php  echo '<a href="', esc_url( $url ), '" title="', esc_attr( $image['title'] ), '"><img src="', esc_url( $image['url'] ), '"  alt="', esc_attr( $image['alt'] ), '"></a>';
+                    <?php  echo '<a data-toggle="modal" data-target="#newsletterModal"><img src="', esc_url( $image['url'] ), '"  alt="', esc_attr( $image['alt'] ), '"></a>';
                 }
             }
 

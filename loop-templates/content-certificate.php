@@ -17,8 +17,25 @@ $class = $prefix.'section';
         <div class="col-md-6">
             <div class="inner">
             <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ) ?></h1>
-            <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead', true ) ?></h2>
-            <p><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph', true ) ?></p>
+                <!-- // TODO initialize carousel -->
+                <div class="<?= $prefix ?> owl-carousel owl-theme">
+                    <div class="item">
+                        <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-1', true ) ?></h2>
+                        <p><?= get_post_meta( get_the_ID(), $prefix.'paragraph-1', true ) ?></p>
+                    </div>
+                    <div class="item">
+                        <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-2', true ) ?></h2>
+                        <p><?= get_post_meta( get_the_ID(), $prefix.'paragraph-2', true ) ?></p>
+                    </div>
+                    <div class="item">
+                        <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-3', true ) ?></h2>
+                        <p><?= get_post_meta( get_the_ID(), $prefix.'paragraph-3', true ) ?></p>
+                    </div>
+                </div>
+
+                <a class="fl-button activate-<?= $prefix ?>" href="#">
+                    <?= get_post_meta( get_the_ID(), $prefix.'slider-button-text', true ) ?> <i class="fa fa-chevron-right"></i>
+                </a>
 
 
                 <div class="scroll-button" href="#down">

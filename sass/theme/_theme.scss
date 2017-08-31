@@ -29,12 +29,17 @@ a:hover {
 
 #section0 {
   @include video_background();
+  .scroll-button {
+    position: relative;
+    top: 200px;
+    margin-top: 50px;
+  }
 }
 
 
 .inner {
   text-align: center;
-  padding: 15% 5%;
+  padding: 10% 5% 5%;
   transition: all .3s ease;
   width: 100%;
 }
@@ -135,9 +140,42 @@ header {
 
 .fl-world-section, .fl-certificates-section {
   h1 {
-    @include big_heading($world-subheading)
+    @include big_heading($world-subheading);
+    big {
+      font-size: 49px;
+    }
+  }
+
+}
+.fl-world-section {
+  h1 {
+    margin-top: 10vh;
+  }
+  .scroll-button {
+    margin-top: -100px!important;
   }
 }
+
+.svg-text {
+  position: absolute;
+  font-size: 20px;
+}
+.svg-text.position-svg-1 {
+  left: 90px;
+  bottom: 15vh;
+}
+.svg-text.position-svg-2 {
+  right: 60px;
+  bottom: 15vh;
+}
+.svg-text.position-svg-3 {
+  top: 33vh;
+  left: 47%;
+}
+
+
+
+
 .fl-numbers-section {
   h1.main {
     font-size: 50px;
@@ -181,7 +219,7 @@ header {
 
 .fl-world-section {
   img {
-    width:600px;
+    width:50vw;
   }
 }
 .fl-certificate-section {
@@ -243,14 +281,34 @@ header {
   left: 23%;
   margin: 0 auto;
 }
+.overlay-text.default {
+  display:block;
+  font-size: 2em;
+  top: 48vh;
+  left: 19vw;
+}
 
 .first-hover, .second-hover, .third-hover {
   -webkit-transition: fill 0.5s ease-out;
   -moz-transition: fill 0.5s ease-out;
   -o-transition: fill 0.5s ease-out;
   transition: fill 0.5s ease-out;
+
   &:hover {
     fill: white!important;
+  }
+
+}
+
+g.third-hover {
+  -webkit-transition: fill 0.5s ease-out;
+  -moz-transition: fill 0.5s ease-out;
+  -o-transition: fill 0.5s ease-out;
+  transition: fill 0.5s ease-out;
+  &:hover {
+    path {
+      fill: white !important;
+    }
   }
 }
 
@@ -273,6 +331,7 @@ header {
    padding:0px;
    img {
      width:50%;
+     max-width: 250px;
    }
  }
 .sidebar-brand {
@@ -288,7 +347,12 @@ header {
     }
   }
 }
-
+.menu-name {
+  margin-left: 50px;
+  font-size: 25px;
+  color:#fff;
+  text-transform:uppercase;
+}
 .menu-trigger {
   cursor: pointer;
   position: fixed;
@@ -448,8 +512,8 @@ video::-webkit-media-controls {
 }
 .footer-bottom {
   .nav-item {
-    bottom: 30px;
-    position: fixed;
+    bottom: 0px;
+    position: absolute;
     left: 25%;
     transform: translate(-50%, -50%);
   }

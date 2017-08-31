@@ -22,31 +22,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="full-width-page-wrapper">
     <div class="overlay"></div>
 
+<!--    anchors:['start', 'worum', 'weltweit', 'was', '3-stufen', 'ziel', 'siegel', 'bewerben', 'plastik', 'standards', 'kontakt'],-->
 
 
     <!-- Sidebar -->
     <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
         <ul class="nav sidebar-nav">
             <li>
-                <a href="#">Home</a>
+                <a href="#start">Home</a>
             </li>
             <li>
-                <a href="#why">Worum geht's</a>
+                <a href="#worum">Worum geht's</a>
             </li>
             <li>
-                <a href="#what">Was ist Flustix</a>
+                <a href="#was">Was ist Flustix</a>
             </li>
             <li>
-                <a href="#how-it-works">So funktioniert's</a>
+                <a href="#3-stufen">So funktioniert's</a>
             </li>
             <li>
-                <a href="#goal">Unser Ziel</a>
+                <a href="#ziel">Unser Ziel</a>
             </li>
             <li>
-                <a href="#certificate">Siegel</a>
+                <a href="#siegel">Siegel</a>
             </li>
             <li>
-                <a href="#footer">Kontakt</a>
+                <a href="#kontakt">Kontakt</a>
             </li>
         </ul>
     </nav>
@@ -54,10 +55,11 @@ $container = get_theme_mod( 'understrap_container_type' );
         <span class="hamb-top"></span>
         <span class="hamb-middle"></span>
         <span class="hamb-bottom"></span>
+        <span class="menu-name">Menu</span>
     </button>
 
     <div id="fullpage">
-        <div class="section row" id="section0">
+        <div class="section" id="section0">
             <?php echo get_template_part('loop-templates/content', 'video'); ?>
         </div>
 <!--        <div class="section" id="section1">-->
