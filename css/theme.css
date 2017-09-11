@@ -10212,13 +10212,14 @@ a:hover {
     color: #f1c40f;
     font-size: 40px; }
   #section0 .big-background {
-    z-index: 550;
+    z-index: 0;
     text-align: center;
     height: 100%;
     min-height: 100%;
     position: relative;
     overflow: hidden; }
   #section0 .big-background .big-background-container {
+    padding: 0px 20px;
     width: 830px;
     max-width: 100%;
     display: inline-block;
@@ -10229,13 +10230,14 @@ a:hover {
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    z-index: 10000; }
   #section0 .big-background-container p {
     color: #fff;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 35px;
+    line-height: 40px;
+    text-shadow: 1px 1px 2px #000;
     font-family: 'Raleway', sans-serif;
-    text-shadow: 1px 1px 20px black;
     -moz-transition: left 1s ease, width 0s ease-out 1s, border-width 0s ease-out 1s;
     -webkit-transition: left 1s ease, width 0s ease-out 1s, border-width 0s ease-out 1s; }
   #section0 .big-background-container p:target {
@@ -10428,7 +10430,7 @@ header {
   bottom: 15vh; }
 
 .svg-text.position-svg-3 {
-  top: 33vh;
+  top: 32vh;
   left: 47%; }
 
 .fl-numbers-section h1.main {
@@ -10494,8 +10496,11 @@ header {
 .fl-world-section img {
   width: 50vw; }
 
+.video-section {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
 .fl-certificate-section .image img {
-  width: 50%;
   margin: auto auto; }
 
 .fl-certificate-section .image a {
@@ -10535,17 +10540,11 @@ header {
   position: absolute;
   background: transparent;
   padding: 20px;
-  top: 40vh;
+  top: 42vh;
   max-width: 30vw;
-  font-size: 0.75em;
+  font-size: 1em;
   left: 23%;
   margin: 0 auto; }
-
-.overlay-text.default {
-  display: block;
-  font-size: 2em;
-  top: 48vh;
-  left: 19vw; }
 
 .first-hover, .second-hover, .third-hover {
   -webkit-transition: fill 0.5s ease-out;
@@ -10766,6 +10765,32 @@ video::-webkit-media-controls {
   position: absolute;
   left: 25%;
   transform: translate(-50%, -50%); }
+
+.fl-footer-section .nav-item a, .fl-footer-section .nav-item h2 {
+  cursor: pointer;
+  color: #333; }
+
+.image img {
+  cursor: pointer; }
+
+.social-media-icons .images {
+  bottom: 45vh;
+  position: absolute;
+  margin: auto auto;
+  width: 100%; }
+
+.social-media-icons .explanation {
+  width: 520px;
+  height: auto;
+  top: 10%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.social-media-icons img {
+  height: 65px;
+  width: 65px;
+  margin: 10px; }
 
 /*-------------------------------*/
 /*           VARIABLES           */
@@ -11013,6 +11038,87 @@ video::-webkit-media-controls {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+  .navbar-brand.custom-logo-link img {
+    width: 80px; }
+  .section .col-md-6:first-child h2 {
+    font-size: 17px;
+    margin-bottom: 10px; }
+  #section0 .scroll-button {
+    top: 20vh; }
+  .section .col-md-6:first-child {
+    padding: 15px; }
+    .section .col-md-6:first-child p {
+      font-size: 12px; }
+    .section .col-md-6:first-child h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      margin-top: 35px; }
+  .fl-numbers-section h1 {
+    font-size: 20px;
+    margin-top: 40px; }
+  .fl-world-section img {
+    width: 90vw;
+    margin-top: 10vh; }
+  .fl-world-section h1 {
+    font-size: 20px; }
+  .row .col-md-6 h1 {
+    margin-top: 5vh; }
+  .fl-button {
+    margin-bottom: 10px; }
+  .owl-item p {
+    padding: 6px 20px; }
+  .overlay-text {
+    z-index: 1000;
+    position: absolute;
+    background: 0 0;
+    padding: 20px;
+    top: 44vh;
+    max-width: 62vw;
+    font-size: 11px;
+    left: 23%;
+    margin: 0 auto; }
+  .social-media-sidebar ul {
+    padding: 5px; }
+  .social-media-sidebar ul li img {
+    max-width: 20px;
+    max-height: 20px; }
+  .certificates.row {
+    width: 100%; }
+  .certificate-img {
+    margin-top: 0px;
+    margin-bottom: 20px; }
+  .certificate-img img {
+    width: 100px; }
+  .fl-certificates-section h1 {
+    font-size: 19px;
+    line-height: 30px; }
+  .fl-certificate-section .image img {
+    width: 350px; }
+  .fl-standards-section .image img {
+    width: 250px; }
+  .fl-footer-section .inner {
+    margin-top: 10px; }
+    .fl-footer-section .inner .nav.flex-column {
+      margin-bottom: 10px; }
+  .social-media-icons {
+    width: 100%; }
+    .social-media-icons .explanation {
+      width: 279px;
+      height: auto;
+      bottom: 5%;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 20%); }
+    .social-media-icons .images {
+      position: relative;
+      margin-top: 100px;
+      bottom: 0px; }
+    .social-media-icons img {
+      width: 40px;
+      height: 40px;
+      margin: 5px; } }
 
 /*
 * Use existing Bootstrap 4 classes and

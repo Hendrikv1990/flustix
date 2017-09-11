@@ -105,6 +105,10 @@ jQuery(document).ready(function () {
             // TODO move this
             if(index == 1) {
 
+                // reactivates the video when the index is reached TODO
+                //jQuery('video').get(0).play();
+                //jQuery('#bgndVideo').YTPPlay();
+
 
 
                 // remove the social media bar
@@ -119,9 +123,7 @@ jQuery(document).ready(function () {
         },
     });
 
-    $('.scroll-button').on('click', function () {
-        $.fn.fullpage.moveSectionDown();
-    });
+
 
     /// let' initalize some carousels
     // each one has the prefix of the section <?= $prefix ?>owl-carousel
@@ -239,11 +241,7 @@ jQuery(document).ready(function () {
         $('#full-width-page-wrapper').toggleClass('toggled');
     });
 
-    var owl = $('.fl-goal-');
-    owl.owlCarousel();
-    $('.activate-slider').click(function() {
-        owl.trigger('next.owl.carousel');
-    })
+
 
 
     var owlstandards = $('.fl-standards-');
@@ -265,6 +263,54 @@ jQuery(document).ready(function () {
         owlhowto.trigger('next.owl.carousel');
     })
 
+    $('#player iframe').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+
+    // If you want to keep full screen on window resize
+    $(window).resize(function(){
+        $('#player iframe').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+    });
+
+    $('.scroll-button').on('click', function () {
+        $.fn.fullpage.moveSectionDown();
+    });
+
+
+    var owlgoal = $('.fl-goal-');
+    owlgoal.owlCarousel();
+    $('.activate-slider').click(function() {
+        owlgoal.trigger('next.owl.carousel');
+    })
+
+    $ = jQuery;
+
+    var _image_div = $('.fl-goal-section .image')
+
+    var _initial_image = _image_div.data('images')[0];
+
+
+    _image_div.css("background-image", "url("+_initial_image+")");
+
+
+    var _images_loop = _image_div.data('images');
+
+
+
+    owlgoal.on('changed.owl.carousel', function(event) {
+       console.log( event.item.index ); // returns 0, 1, 2 >
+        console.log( event.page.index );
+        // with this we go overwrite the slider with that that index.
+        var _updated_image = _images_loop[event.page.index];
+        _image_div.css("background-image", "url("+_updated_image+")");
+    });
+
+    $.each(_images_loop)(function(){
+
+    });
+
+
+
+
+
 
 
 
@@ -277,6 +323,15 @@ jQuery(document).ready(function () {
 
 (function($) {
     $(document).ready(function() {
+
+
+        // $(document).ready(function () {
+        //     $('video').get(0).play();
+        // })
+        //
+        // $('video').click(function() {
+        //     this.paused ? this.play() : this.pause();
+        // });
 
 
         $.fn.extend({
@@ -310,7 +365,7 @@ jQuery(document).ready(function () {
 
         //Device.js will check if it is Tablet or Mobile - http://matthewhudson.me/projects/device.js/
         if (!device.tablet() && !device.mobile()) {
-            $(".player").mb_YTPlayer();
+            //$(".player").mb_YTPlayer();
         } else {
             //jQuery will add the default background to the preferred class
             $('.big-background').addClass(

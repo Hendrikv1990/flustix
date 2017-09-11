@@ -44,7 +44,10 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <a href="#ziel">Unser Ziel</a>
             </li>
             <li>
-                <a href="#siegel">Siegel</a>
+                <a href="#bewerben">Siegel</a>
+            </li>
+            <li>
+                <a href="#standards">Unsere Prüfpartner</a>
             </li>
             <li>
                 <a href="#kontakt">Kontakt</a>

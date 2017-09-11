@@ -22,20 +22,20 @@ $class = $prefix.'section';
                     <div class="item">
                         <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-1', true ) ?></h2>
                         <p><?= get_post_meta( get_the_ID(), $prefix.'paragraph-1', true ) ?></p>
+                        <a class="fl-button activate-<?= $prefix ?>" href="#">
+                            <?= get_post_meta( get_the_ID(), $prefix.'slider-button-text-1', true ) ?>
+                        </a>
                     </div>
                     <div class="item">
                         <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-2', true ) ?></h2>
                         <p><?= get_post_meta( get_the_ID(), $prefix.'paragraph-2', true ) ?></p>
-                    </div>
-                    <div class="item">
-                        <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-3', true ) ?></h2>
-                        <p><?= get_post_meta( get_the_ID(), $prefix.'paragraph-3', true ) ?></p>
+                        <a class="fl-button activate-<?= $prefix ?>" href="#">
+                            <?= get_post_meta( get_the_ID(), $prefix.'slider-button-text-2', true ) ?>
+                        </a>
                     </div>
                 </div>
 
-                <a class="fl-button activate-<?= $prefix ?>" href="#">
-                    <?= get_post_meta( get_the_ID(), $prefix.'slider-button-text', true ) ?> <i class="fa fa-chevron-right"></i>
-                </a>
+
 
 
                 <div class="scroll-button" href="#down">
@@ -73,7 +73,7 @@ $class = $prefix.'section';
 
             if ( !empty( $images ) ) {
                 foreach ( $images as $image ) {
-                    echo '<div class="cert-img"><a href="'.$url.'" target="_blank"><img src="', esc_url( $image['url'] ), '"  alt="', esc_attr( $image['alt'] ), '"></a></div>';
+                    echo '<div class="cert-img"><a target="_blank" href="#" data-toggle="modal" data-target="#contactModal"><img src="', esc_url( $image['url'] ), '"  alt="', esc_attr( $image['alt'] ), '"></a></div>';
                 }
             }
 

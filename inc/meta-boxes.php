@@ -204,8 +204,15 @@ function fl_get_meta_box( $meta_boxes ) {
                 'type' => 'text',
             ),
             array(
-                'id' => $prefix . 'how-it-works-button-text',
-                'name' => esc_html__( 'How it works Button', 'metabox-online-generator' ),
+                'id' => $prefix . 'how-it-works-button-text-1',
+                'name' => esc_html__( 'How it works Button #1', 'metabox-online-generator' ),
+                'desc' => 'button in slide #1',
+                'type' => 'text',
+            ),
+            array(
+                'id' => $prefix . 'how-it-works-button-text-2',
+                'name' => esc_html__( 'How it works Button #2', 'metabox-online-generator' ),
+                'desc' => 'button in slide #2',
                 'type' => 'text',
             ),
             array(
@@ -252,9 +259,14 @@ function fl_get_meta_box( $meta_boxes ) {
                 'name' => esc_html__( 'Goal Paragraph 2', 'metabox-online-generator' ),
             ),
             array(
-                'id' => $prefix . 'goal-button-text',
+                'id' => $prefix . 'goal-button-text-1',
                 'type' => 'text',
-                'name' => esc_html__( 'Goal Button Text', 'metabox-online-generator' ),
+                'name' => esc_html__( 'Goal Button Text #1', 'metabox-online-generator' ),
+            ),
+            array(
+                'id' => $prefix . 'goal-button-text-2',
+                'type' => 'text',
+                'name' => esc_html__( 'Goal Button Text #2', 'metabox-online-generator' ),
             ),
             array(
                 'id' => $prefix . 'goal-url',
@@ -336,19 +348,14 @@ function fl_get_meta_box( $meta_boxes ) {
                 'name' => esc_html__( 'Certificate Paragraph 2', 'metabox-online-generator' ),
             ),
             array(
-                'id' => $prefix . 'certificate-subhead-3',
+                'id' => $prefix . 'certificate-slider-button-text-1',
                 'type' => 'text',
-                'name' => esc_html__( 'Certificate Subhead #3', 'metabox-online-generator' ),
+                'name' => esc_html__( 'Slider Button Text #1', 'metabox-online-generator' ),
             ),
             array(
-                'id' => $prefix . 'certificate-paragraph-3',
-                'type' => 'wysiwyg',
-                'name' => esc_html__( 'Certificate Paragraph #3', 'metabox-online-generator' ),
-            ),
-            array(
-                'id' => $prefix . 'certificate-slider-button-text',
+                'id' => $prefix . 'certificate-slider-button-text-2',
                 'type' => 'text',
-                'name' => esc_html__( 'Slider Button Text', 'metabox-online-generator' ),
+                'name' => esc_html__( 'Slider Button Text #2', 'metabox-online-generator' ),
             ),
             array(
                 'id' => $prefix . 'certificate-image',
@@ -427,31 +434,6 @@ function fl_get_meta_box( $meta_boxes ) {
                 'name' => esc_html__( 'Standards Paragraph 1', 'metabox-online-generator' ),
             ),
             array(
-                'id' => $prefix . 'standards-subhead-2',
-                'type' => 'text',
-                'name' => esc_html__( 'Standards Subhead', 'metabox-online-generator' ),
-            ),
-            array(
-                'id' => $prefix . 'standards-paragraph-2',
-                'type' => 'wysiwyg',
-                'name' => esc_html__( 'Standards Paragraph 2', 'metabox-online-generator' ),
-            ),
-            array(
-                'id' => $prefix . 'standards-subhead-3',
-                'type' => 'text',
-                'name' => esc_html__( 'Standards Subhead', 'metabox-online-generator' ),
-            ),
-            array(
-                'id' => $prefix . 'standards-paragraph-3',
-                'type' => 'wysiwyg',
-                'name' => esc_html__( 'Standards Paragraph 3', 'metabox-online-generator' ),
-            ),
-            array(
-                'id' => $prefix . 'standards-button-text',
-                'type' => 'text',
-                'name' => esc_html__( 'Button Text', 'metabox-online-generator' ),
-            ),
-            array(
                 'id' => $prefix . 'standards-image',
                 'type' => 'image_advanced',
                 'name' => esc_html__( 'Standards Image', 'metabox-online-generator' ),
@@ -468,6 +450,42 @@ function fl_get_meta_box( $meta_boxes ) {
             ),
         ),
     );
+
+    // array(
+//    'id' => $prefix . 'standards-subhead-2',
+//                'type' => 'text',
+//                'name' => esc_html__( 'Standards Subhead', 'metabox-online-generator' ),
+//            ),
+//            array(
+//                'id' => $prefix . 'standards-paragraph-2',
+//                'type' => 'wysiwyg',
+//                'name' => esc_html__( 'Standards Paragraph 2', 'metabox-online-generator' ),
+//            ),
+//            array(
+//                'id' => $prefix . 'standards-subhead-3',
+//                'type' => 'text',
+//                'name' => esc_html__( 'Standards Subhead', 'metabox-online-generator' ),
+//            ),
+//            array(
+//                'id' => $prefix . 'standards-paragraph-3',
+//                'type' => 'wysiwyg',
+//                'name' => esc_html__( 'Standards Paragraph 3', 'metabox-online-generator' ),
+//            ),
+//            array(
+//                'id' => $prefix . 'standards-button-text-1',
+//                'type' => 'text',
+//                'name' => esc_html__( 'Button Text #1', 'metabox-online-generator' ),
+//            ),
+//            array(
+//                'id' => $prefix . 'standards-button-text-2',
+//                'type' => 'text',
+//                'name' => esc_html__( 'Button Text #2', 'metabox-online-generator' ),
+//            ),
+//            array(
+//                'id' => $prefix . 'standards-button-text-3',
+//                'type' => 'text',
+//                'name' => esc_html__( 'Button Text #3', 'metabox-online-generator' ),
+//            ),
 
     /// Standards section
     $meta_boxes[] = array(

@@ -44,16 +44,16 @@ $container = get_theme_mod( 'understrap_container_type' );
     <ul>
         <li>
 
-            <a href="https://www.facebook.com/flustix"><img src="<?= get_stylesheet_directory_uri() . '/img/sidebar/facebook.png' ?>" /></a>
+            <a target="_blank" href="https://www.facebook.com/flustix"><img src="<?= get_stylesheet_directory_uri() . '/img/sidebar/facebook.png' ?>" /></a>
         </li>
         <li>
-            <a href="https://twitter.com/flustix_siegel"><img src="<?= get_stylesheet_directory_uri() . '/img/sidebar/twitter.png' ?>" /></a>
+            <a target="_blank" href="https://twitter.com/flustix_siegel"><img src="<?= get_stylesheet_directory_uri() . '/img/sidebar/twitter.png' ?>" /></a>
         </li>
         <li>
-            <a href="https://www.instagram.com/flustix_official/"><img src="<?= get_stylesheet_directory_uri() . '/img/sidebar/instagram.png' ?>" /></a>
+            <a target="_blank" href="https://www.instagram.com/flustix_official/"><img src="<?= get_stylesheet_directory_uri() . '/img/sidebar/instagram.png' ?>" /></a>
         </li>
         <li>
-            <a href="#" data-toggle="modal" data-target="#contactModal" target="_blank"><img src="<?= get_stylesheet_directory_uri() . '/img/sidebar/man-user.png' ?>" /></a>
+            <a target="_blank" href="#" data-toggle="modal" data-target="#contactModal" target="_blank"><img src="<?= get_stylesheet_directory_uri() . '/img/sidebar/man-user.png' ?>" /></a>
         </li>
     </ul>
 

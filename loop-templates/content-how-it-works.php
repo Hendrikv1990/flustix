@@ -25,17 +25,22 @@ $class = $prefix.'section';
                     <div class="item">
                         <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-1', true ) ?></h2>
                         <?= get_post_meta( get_the_ID(), $prefix.'paragraph-1', true ) ?>
+
+                        <a class="fl-button activate-<?= $prefix ?>" href="#">
+                            <?= get_post_meta( get_the_ID(), $prefix.'button-text-1', true ) ?>
+                        </a>
                     </div>
                     <div class="item">
                         <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-2', true ) ?></h2>
                         <?= get_post_meta( get_the_ID(), $prefix.'paragraph-2', true ) ?>
+                        <a class="fl-button activate-<?= $prefix ?>" href="#">
+                            <?= get_post_meta( get_the_ID(), $prefix.'button-text-2', true ) ?>
+                        </a>
                     </div>
                 </div>
 
 
-                <a class="fl-button activate-<?= $prefix ?>" href="#">
-                    <?= get_post_meta( get_the_ID(), $prefix.'button-text', true ) ?> <i class="fa fa-chevron-right"></i>
-                </a>
+
 
                 <div class="scroll-button" href="#down">
                     <div class="triangle"></div>
@@ -56,7 +61,7 @@ $class = $prefix.'section';
             }
         }
 
-        $svg = get_stylesheet_directory_uri() . '/img/graphic_how_it_works.svg';
+        $svg = get_stylesheet_directory_uri() . '/img/graphic-1.svg';
 
         ?>
         <div class="col-md-6 image" style="">
@@ -76,10 +81,6 @@ $class = $prefix.'section';
             }
 
             ?>
-
-            <h4 class="svg-text position-svg-1">1. Flustix</h4>
-            <h4 class="svg-text position-svg-2">3. Markt</h4>
-            <h4 class="svg-text position-svg-3">2. Labor</h4>
 
             <div class="overlay-text how-it-works-overlay-text-1" style="display:none;"><?= get_post_meta( get_the_ID(), $prefix.'text-image-1', true ); ?></div>
             <div class="overlay-text how-it-works-overlay-text-2" style="display:none;"><?= get_post_meta( get_the_ID(), $prefix.'text-image-2', true ); ?></div>
