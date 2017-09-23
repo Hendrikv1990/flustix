@@ -25,14 +25,14 @@ $class = $prefix . 'section';
                     <div class="item">
                         <h2><?php echo get_post_meta(get_the_ID(), $prefix . 'subhead-1', true) ?></h2>
                         <p><?php echo get_post_meta(get_the_ID(), $prefix . 'paragraph-1', true) ?></p>
-                        <a class="fl-button activate-slider" href="#">
+                        <a class="fl-button fl-goal-activate-slider" href="#">
                             <?php echo get_post_meta(get_the_ID(), $prefix . 'button-text-1', true) ?>
                         </a>
                     </div>
                     <div class="item">
                         <h2><?php echo get_post_meta(get_the_ID(), $prefix . 'subhead-2', true) ?></h2>
                         <p><?php echo get_post_meta(get_the_ID(), $prefix . 'paragraph-2', true) ?></p>
-                        <a class="fl-button activate-slider" href="#">
+                        <a class="fl-button fl-goal-activate-slider" href="#">
                             <?php echo get_post_meta(get_the_ID(), $prefix . 'button-text-2', true) ?>
                         </a>
                     </div>
@@ -58,8 +58,7 @@ $class = $prefix . 'section';
 
         ?>
         <div class="col-md-6 image" style=""
-             data-images="<?php echo htmlspecialchars(json_encode($slide_images), ENT_QUOTES, 'UTF-8'); ?>"
-        ">
+             data-images="<?php echo htmlspecialchars(json_encode($slide_images), ENT_QUOTES, 'UTF-8'); ?>">
 
         <?php
         $images = rwmb_meta($prefix . 'image', 'size=full'); // Since 4.8.0

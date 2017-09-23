@@ -10186,7 +10186,8 @@ a:hover {
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
-  background-position: center; }
+  background-position: center;
+  transition: 0.25s; }
   .image a {
     margin: auto auto; }
   .image img {
@@ -10290,6 +10291,14 @@ a:hover {
     position: relative;
     top: 200px;
     margin-top: 50px; }
+  @media (min-aspect-ratio: 16 / 9) {
+    #section0 .fullscreen-bg__video {
+      height: 300%;
+      top: -100%; } }
+  @media (max-aspect-ratio: 16 / 9) {
+    #section0 .fullscreen-bg__video {
+      width: 300%;
+      left: -100%; } }
 
 .inner {
   text-align: center;
@@ -10782,7 +10791,7 @@ video::-webkit-media-controls {
 .social-media-icons .explanation {
   width: 520px;
   height: auto;
-  top: 10%;
+  top: 40%;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%); }
@@ -11039,6 +11048,10 @@ video::-webkit-media-controls {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1; }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 780px) {
+  #big-video-wrap video {
+    display: none; } }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
   .navbar-brand.custom-logo-link img {
     width: 80px; }
@@ -11050,21 +11063,30 @@ video::-webkit-media-controls {
   .section .col-md-6:first-child {
     padding: 15px; }
     .section .col-md-6:first-child p {
-      font-size: 12px; }
+      font-size: 10px;
+      margin-bottom: 0px; }
     .section .col-md-6:first-child h1 {
       font-size: 20px;
-      margin-bottom: 20px;
-      margin-top: 35px; }
+      margin-bottom: 10px;
+      margin-top: 25px; }
+    .section .col-md-6:first-child h1:after {
+      margin-bottom: 20px; }
   .fl-numbers-section h1 {
     font-size: 20px;
     margin-top: 40px; }
   .fl-world-section img {
     width: 90vw;
-    margin-top: 10vh; }
+    height: 50vw;
+    margin-top: 10vh;
+    margin-bottom: 200px; }
+  .fl-goal-section .image {
+    display: none; }
   .fl-world-section h1 {
     font-size: 20px; }
-  .row .col-md-6 h1 {
-    margin-top: 5vh; }
+  .row .col-md-6 {
+    height: 100vh; }
+    .row .col-md-6 h1 {
+      margin-top: 5vh; }
   .fl-button {
     margin-bottom: 10px; }
   .owl-item p {

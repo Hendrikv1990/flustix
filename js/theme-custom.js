@@ -10,9 +10,12 @@ jQuery(document).ready(function () {
         verticalCentered: true,
         anchors:['start', 'worum', 'weltweit', 'was', '3-stufen', 'ziel', 'siegel', 'bewerben', 'plastik', 'standards', 'kontakt'],
         sectionsColor: ['transparent', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
-
+        autoScrolling: decide(), //decide()
+        fitToSection: decide(),
 
         onLeave: function (index, nextIndex, direction) {
+
+
 
             // we hide the logo after leaving the first index
 
@@ -106,7 +109,7 @@ jQuery(document).ready(function () {
             if(index == 1) {
 
                 // reactivates the video when the index is reached TODO
-                //jQuery('video').get(0).play();
+                jQuery('video').get(0).play();
                 //jQuery('#bgndVideo').YTPPlay();
 
 
@@ -251,11 +254,7 @@ jQuery(document).ready(function () {
     })
 
 
-    var owlcertificate = $('.fl-certificate-');
-    owlcertificate.owlCarousel();
-    $('.activate-fl-certificate-').click(function() {
-        owlcertificate.trigger('next.owl.carousel');
-    })
+
 
     var owlhowto = $('.fl-how-it-works-');
     owlhowto.owlCarousel();
@@ -272,18 +271,48 @@ jQuery(document).ready(function () {
 
     $('.scroll-button').on('click', function () {
         $.fn.fullpage.moveSectionDown();
+
+        //$.fn.fullpage. .moveTo('firstSlide', 2);
     });
 
 
+
+    /// Goal Area for Carousel
+
     var owlgoal = $('.fl-goal-');
     owlgoal.owlCarousel();
-    $('.activate-slider').click(function() {
+    $('.fl-goal-activate-slider').click(function() {
         owlgoal.trigger('next.owl.carousel');
-    })
+    });
 
-    $ = jQuery;
+    var _image_div = $('.fl-goal-section .image');
 
-    var _image_div = $('.fl-goal-section .image')
+    var _initial_image = _image_div.data('images')[0];
+
+
+    _image_div.css("background-image", "url("+_initial_image+")");
+
+
+    var _images_loop = _image_div.data('images');
+
+    owlgoal.on('changed.owl.carousel', function(event) {
+       console.log( event.item.index ); // returns 0, 1, 2 >
+        console.log( event.page.index );
+        // with this we go overwrite the slider with that that index.
+        var _updated_image = _images_loop[event.page.index];
+        _image_div.css("background-image", "url("+_updated_image+")");
+    });
+
+
+    /// Certificate Area for Carousel
+
+    var owlcertificate = $('.fl-certificate-');
+    owlcertificate.owlCarousel();
+    $('.activate-fl-certificate-').click(function() {
+        owlcertificate.trigger('next.owl.carousel');
+    });
+
+    var _image_div = $('.fl-certificate-section .image');
 
     var _initial_image = _image_div.data('images')[0];
 
@@ -295,19 +324,20 @@ jQuery(document).ready(function () {
 
 
 
-    owlgoal.on('changed.owl.carousel', function(event) {
-       console.log( event.item.index ); // returns 0, 1, 2 >
+
+    owlcertificate.on('changed.owl.carousel', function(event) {
+
+        console.log( event.item.index ); // returns 0, 1, 2 >
         console.log( event.page.index );
         // with this we go overwrite the slider with that that index.
         var _updated_image = _images_loop[event.page.index];
         _image_div.css("background-image", "url("+_updated_image+")");
     });
 
-    $.each(_images_loop)(function(){
 
-    });
-
-
+    function decide(){
+        return !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent));
+    }
 
 
 
@@ -366,11 +396,18 @@ jQuery(document).ready(function () {
         //Device.js will check if it is Tablet or Mobile - http://matthewhudson.me/projects/device.js/
         if (!device.tablet() && !device.mobile()) {
             //$(".player").mb_YTPlayer();
+
+
+
         } else {
             //jQuery will add the default background to the preferred class
+            $.fn.fullpage.setAutoScrolling(false);
             $('.big-background').addClass(
                 'big-background-default-image');
         }
+
+
+
     });
 
 

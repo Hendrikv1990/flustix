@@ -50,13 +50,13 @@ $class = $prefix.'section';
         $images = rwmb_meta( $prefix.'image', 'size=full' ); // Since 4.8.0
         if (!empty($images)) {
         foreach ($images as $image) {
-        $image = $image;
+            $slide_images[] = $image['url'];
         //echo '<img src="', esc_url($image['url']), '"  alt="', esc_attr($image['alt']), '">';
         }
         }
 
         ?>
-        <div class="col-md-6 image" style="background-image:url('<?php echo $image['url'] ?>');">
+        <div class="col-md-6 image" style="background-image:url('<?php echo $image['url'] ?>');" data-images="<?php echo htmlspecialchars(json_encode($slide_images), ENT_QUOTES, 'UTF-8'); ?>">>
 
             <?php
             //$images = rwmb_meta( $prefix.'image', 'size=full' ); // Since 4.8.0

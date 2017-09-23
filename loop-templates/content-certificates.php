@@ -48,9 +48,9 @@ if ( !empty( $images ) ) {
 
         ?>
 
-        <div class="certificate-img col-6 col-md-4"><img src="<?= get_stylesheet_directory_uri() . '/img/blue-certificate.png' ?>" /></div>
-        <div class="certificate-img col-6 col-md-4"><img src="<?= get_stylesheet_directory_uri() . '/img/white-certificate.png' ?>" /></div>
-        <div class="certificate-img  col-6 col-md-4"><img src="<?= get_stylesheet_directory_uri() . '/img/black-certificate.png' ?>" /></div>
+        <div class="certificate-img col-6 col-md-4"><img src="<?= get_stylesheet_directory_uri() . '/img/Siegel_blue_DCB-02.png' ?>" /></div>
+        <div class="certificate-img col-6 col-md-4"><img src="<?= get_stylesheet_directory_uri() . '/img/Siegel_blueA_DCB-02.png' ?>" /></div>
+        <div class="certificate-img  col-6 col-md-4"><img src="<?= get_stylesheet_directory_uri() . '/img/Siegel_black_DCB.png' ?>" /></div>
 
         <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ); ?></h1>
 

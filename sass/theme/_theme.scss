@@ -17,6 +17,7 @@ a:hover {
   width: 100%;
   height: 100vh;
   background-position: center;
+  transition: 0.25s;
   a {
     margin: auto auto;
   }
@@ -31,6 +32,20 @@ a:hover {
     position: relative;
     top: 200px;
     margin-top: 50px;
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      height: 300%;
+      top: -100%;
+    }
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      width: 300%;
+      left: -100%;
+    }
   }
 }
 
@@ -569,12 +584,11 @@ video::-webkit-media-controls {
   .explanation {
     width: 520px;
     height: auto;
-    top: 10%;
+    top: 40%;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
   img {
     height: 65px;
     width: 65px;
