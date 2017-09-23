@@ -20,10 +20,15 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 
 
         wp_enqueue_script( 'jquery' );
+        wp_enqueue_script( 'morph-scripts', get_template_directory_uri() . '/js/morphext.min.js', array(), false);
+        wp_enqueue_script( 'countUp-scripts', get_template_directory_uri() . '/js/countUp.min.js', array(), false);
+
         wp_enqueue_script( 'carousel-scripts', get_template_directory_uri() . '/js/owl.carousel.js', array(), false);
         wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), false);
         wp_enqueue_script( 'scrolloverflow-scripts', get_template_directory_uri() . '/js/scrolloverflow.js', array(), false);
         wp_enqueue_script( 'easing-scripts', get_template_directory_uri() . '/js/jquery.easings.min.js', array(), false);
+        wp_enqueue_script( 'device-scripts', get_template_directory_uri() . '/js/device.min.js', array(), false);
+//        wp_enqueue_script( 'video-scripts', get_template_directory_uri() . '/js/jquery.mb.YTPlayer.js', array(), false);
         wp_enqueue_script( 'fullPage-scripts', get_template_directory_uri() . '/js/jquery.fullPage.js', array(), false);
         wp_enqueue_script( 'understrap-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $the_theme->get( 'Version' ), true );
         wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/js/theme-custom.js', array(), false);

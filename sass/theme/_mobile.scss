@@ -1,0 +1,170 @@
+
+@media only screen and (min-device-width:320px ) and (max-device-width: 780px){
+  #big-video-wrap video {
+    display:none;
+  }
+
+
+}
+// these apply to
+// iphone 5 > 6+
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 736px)
+ {
+
+.navbar-brand.custom-logo-link  {
+    img {
+      width: 80px;
+    }
+  }
+
+  .section .col-md-6:first-child h2 {
+    font-size: 17px;
+    margin-bottom:10px;
+  }
+
+  #section0 .scroll-button {
+    top: 20vh;
+  }
+  .section .col-md-6:first-child {
+    padding: 15px;
+    p {
+      font-size: 10px;
+      margin-bottom:0px;
+    }
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      margin-top: 25px;
+    }
+    h1:after {
+      margin-bottom: 20px;
+    }
+  }
+  .fl-numbers-section h1 {
+    font-size:20px;
+    margin-top:40px;
+  }
+
+  .fl-world-section img {
+    width: 90vw;
+    height: 50vw;
+    margin-top: 10vh;
+    margin-bottom: 200px;
+  }
+  .fl-goal-section .image {
+    display:none;
+  }
+
+  .fl-world-section h1 {
+    font-size: 20px;
+  }
+  .row .col-md-6 {
+    height: 100vh;
+    h1 {
+      margin-top: 5vh;
+    }
+  }
+  .fl-button {
+    margin-bottom: 10px;
+  }
+
+  .owl-item p {
+    padding: 6px 20px;
+  }
+
+  .overlay-text {
+    z-index: 1000;
+    position: absolute;
+    background: 0 0;
+    padding: 20px;
+    top: 44vh;
+    max-width: 62vw;
+    font-size: 11px;
+    left: 23%;
+    margin: 0 auto;
+  }
+  .social-media-sidebar ul {
+    padding:5px;
+  }
+  .social-media-sidebar ul li img {
+    max-width: 20px;
+    max-height: 20px;
+  }
+  .certificates.row {
+    width:100%;
+  }
+  .certificate-img {
+    margin-top:0px;
+    margin-bottom:20px;
+
+  }
+  .certificate-img img {
+
+    width:100px;
+  }
+  .fl-certificates-section h1 {
+    font-size: 19px;
+    line-height: 30px;
+  }
+
+  .fl-certificate-section {
+    .image {
+      img {
+        width: 350px;
+      }
+    }
+  }
+  .fl-standards-section {
+    .image {
+      img {
+        width: 250px;
+      }
+    }
+  }
+
+
+  // footer
+
+
+  .fl-footer-section .inner {
+    margin-top:10px;
+
+    .nav.flex-column {
+      margin-bottom: 10px;
+    }
+  }
+
+  // Footer stuffs
+  .social-media-icons {
+    width:100%;
+    .explanation {
+      width: 279px;
+      height: auto;
+      bottom: 5%;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%,20%);
+    }
+    .images {
+      position:relative;
+      margin-top: 100px;
+      bottom:0px;
+    }
+    img {
+      width: 40px;
+      height:40px;
+      margin:5px;
+    }
+  }
+}
+
+// this is iphone 6
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}

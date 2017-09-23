@@ -1,40 +1,62 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
-
-@import url('https://fonts.googleapis.com/css?family=Railway:200,300,400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600');
 
 body {
-  font-family:$font-family;
+  font-family: $font-family;
 }
 
 a:hover {
   color: $brand-primary;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .image {
-  display:flex;
+  display: flex;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   background-position: center;
+  transition: 0.25s;
   a {
     margin: auto auto;
   }
   img {
-    width:345px;
+    width: 345px;
   }
 }
 
+#section0 {
+  @include video_background();
+  .scroll-button {
+    position: relative;
+    top: 200px;
+    margin-top: 50px;
+  }
 
+  @media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      height: 300%;
+      top: -100%;
+    }
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      width: 300%;
+      left: -100%;
+    }
+  }
+}
 
 .inner {
   text-align: center;
-  padding: 15% 5%;
+  padding: 10% 5% 5%;
   transition: all .3s ease;
   width: 100%;
 }
-#section3, #section10, #section8, #section6 {
+
+#section3, #section10, #section8, #section6, #section0 {
   background-size: cover;
 }
 
@@ -65,14 +87,17 @@ a:hover {
   right: 0;
   cursor: pointer;
 }
+
 .signup .overlay:hover {
-  opacity:0.9;
+  opacity: 0.9;
 
 }
+
 .wrapper {
-  padding:0px;
+  padding: 0px;
   z-index: 0;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -86,24 +111,37 @@ header {
   padding: 75px 120px;
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
-  transition: all .8s cubic-bezier(0.77,0,.175,1);
+  transition: all .8s cubic-bezier(0.77, 0, .175, 1);
 }
+
 .section h1 {
-  color:#333;
+  color: #333;
 }
+
 .section h2 {
-  color:#333;
+  color: #333;
 }
+
 .section p {
-  color:#333;
+  color: #333;
+}
+
+.overlay-video {
+  position: relative;
+  margin-left: 50%;
+  margin-top: 30%;
+  width: 100%;
+  text-align: center;
+
 }
 
 .section {
-  color:$black;
+  color: $black;
   .col-md-6:first-child {
     @include section_padding();
   }
 }
+
 .fl-button {
   @include button($border-width, $brand-primary);
 }
@@ -122,24 +160,68 @@ header {
 
 .fl-world-section, .fl-certificates-section {
   h1 {
-    @include big_heading($world-subheading)
+    @include big_heading($world-subheading);
+    big {
+      font-size: 49px;
+    }
+  }
+
+}
+
+.fl-world-section {
+  h1 {
+    margin-top: 10vh;
+  }
+  .scroll-button {
+    margin-top: -100px !important;
   }
 }
+
+.svg-text {
+  position: absolute;
+  font-size: 20px;
+}
+
+.svg-text.position-svg-1 {
+  left: 90px;
+  bottom: 15vh;
+}
+
+.svg-text.position-svg-2 {
+  right: 60px;
+  bottom: 15vh;
+}
+
+.svg-text.position-svg-3 {
+  top: 32vh;
+  left: 47%;
+}
+
+.fl-numbers-section {
+  h1.main {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  h1.sub {
+    line-height: 1.2;
+  }
+  h1 {
+    @include big_heading($numbers-subheading)
+
+  }
+}
+
 .fl-numbers-section {
   h1 {
     @include big_heading($numbers-subheading)
   }
 }
-.fl-numbers-section {
-  h1 {
-    @include big_heading($numbers-subheading)
-  }
-}
+
 .fl-certificates-section {
   h1 {
     @include big_heading($numbers-subheading);
-    width:100%!important;
-    line-height: 50px!important;
+    width: 100% !important;
+    line-height: 50px !important;
   }
 }
 
@@ -147,7 +229,7 @@ header {
 
 .fl-world-section, .fl-certificates-section {
   img {
-    margin:auto;
+    margin: auto;
   }
 
   .scroll-button {
@@ -160,27 +242,32 @@ header {
 
 .fl-world-section {
   img {
-    width:600px;
+    width: 50vw;
   }
 }
+
+.video-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .fl-certificate-section {
   .image {
     img {
-      width:50%;
-      margin:auto auto;
+      margin: auto auto;
 
     }
     a {
-      margin:0;
+      margin: 0;
     }
-  .cta {
-    background: #fff;
-    color: #000;
-    margin: auto auto;
-  }
-  .cert-img {
-    margin: auto auto;
-  }
+    .cta {
+      background: #fff;
+      color: #000;
+      margin: auto auto;
+    }
+    .cert-img {
+      margin: auto auto;
+    }
   }
 }
 
@@ -189,35 +276,43 @@ header {
     background-color: $brand-primary;
   }
 }
+
 .certificates.row {
   width: 75%;
   margin: 0 auto;
 }
+
 .certificate-img {
-  margin-top:50px;
-  margin-bottom:25px;
+  margin-top: 50px;
+  margin-bottom: 25px;
   img {
-    width:250px;
+    width: 250px;
   }
-  width:100%;
+  width: 100%;
 }
 
 #section9 {
-  background-size:cover;
+  background-size: cover;
 
 }
+
 // svg stuff
 
-.svg { width: 100%}
+.svg {
+  width: 100%
+}
 
 .overlay-text {
-  display:none;
+  display: none;
   z-index: 1000;
   position: absolute;
-  background: #fff;
+  background: transparent;
   padding: 20px;
-  top: 40%;
-  font-size: 12px;
+  top: 42vh;
+  max-width: 30vw;
+  font-size: 1em;
+  left: 23%;
+  margin: 0 auto;
 }
 
 .first-hover, .second-hover, .third-hover {
@@ -225,13 +320,28 @@ header {
   -moz-transition: fill 0.5s ease-out;
   -o-transition: fill 0.5s ease-out;
   transition: fill 0.5s ease-out;
+
   &:hover {
-    fill: white!important;
+    fill: white !important;
+  }
+
+}
+
+g.third-hover {
+  -webkit-transition: fill 0.5s ease-out;
+  -moz-transition: fill 0.5s ease-out;
+  -o-transition: fill 0.5s ease-out;
+  transition: fill 0.5s ease-out;
+  &:hover {
+    path {
+      fill: white !important;
+    }
   }
 }
 
-
-
+.owl-carousel.owl-theme .owl-dots {
+  @include carousel_thumbs();
+}
 
 .scroll-button {
   @include scrolling_button($brand-primary);
@@ -244,13 +354,36 @@ header {
   z-index: 10000;
   display: block;
   position: absolute;
-  display:block;
-  right:0;
-  padding:0px;
+  display: block;
+  right: 0;
+  padding: 0px;
   img {
-    width:50%;
+    width: 50%;
+    max-width: 250px;
   }
 }
+
+.sidebar-brand {
+  .navbar-brand.custom-logo-link {
+    z-index: 10000;
+    display: block;
+    position: absolute;
+    display: block;
+    right: 0;
+    padding: 0px;
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.menu-name {
+  margin-left: 50px;
+  font-size: 25px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
 .menu-trigger {
   cursor: pointer;
   position: fixed;
@@ -280,11 +413,13 @@ header {
   top: -12px;
   left: 0;
 }
+
 .menu-trigger .icon:after {
   content: "";
   top: -6px;
   left: 0;
 }
+
 .menu-trigger .icon, .menu-trigger .icon:before, .menu-trigger .icon:after {
   position: absolute;
   display: inline-block;
@@ -295,24 +430,24 @@ header {
 
 /* Style for our header texts
        * --------------------------------------- */
-h1{
+h1 {
   font-size: 5em;
-  padding:0;
+  padding: 0;
 }
 
 /* Centered texts in each section
 * --------------------------------------- */
-.section{
-  text-align:center;
+.section {
+  text-align: center;
   overflow: hidden;
 }
 
-#myVideo{
+#myVideo {
   position: absolute;
   right: 0;
   bottom: 0;
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background-size: 100% 100%;
@@ -321,14 +456,12 @@ h1{
   background-position: center center;
   background-size: contain;
   object-fit: cover; /*cover video background */
-  z-index:3;
+  z-index: 3;
 }
-
-
 
 /* Layer with position absolute in order to have it over the video
 * --------------------------------------- */
-#section0 .layer{
+#section0 .layer {
   position: absolute;
   z-index: 4;
   width: 100%;
@@ -339,16 +472,15 @@ h1{
   * Preventing flicker on some browsers
   * See http://stackoverflow.com/a/36671466/1081396  or issue #183
   */
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 /*solves problem with overflowing video in Mac with Chrome */
-#section0{
+#section0 {
   overflow: hidden;
 }
-
 
 /* Bottom menu
 * --------------------------------------- */
@@ -356,33 +488,36 @@ h1{
   color: #fff;
 }
 
-
 /* Hiding video controls
 * See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
 * --------------------------------------- */
 video::-webkit-media-controls {
-  display:none !important;
+  display: none !important;
 }
 
 // menu thingy
-
 .menu-trigger .icon, .menu-trigger .icon:before, .menu-trigger .icon:after {
-  background:#fff;
+  background: #fff;
 }
+
 .menu-trigger {
-  color:#fff;
+  color: #fff;
 }
+
 .menu-trigger.white {
-  color:#fff;
+  color: #fff;
 }
+
 .menu-trigger.black {
-  color:#000;
+  color: #000;
 }
+
 .menu-trigger .icon.black, .menu-trigger .icon.black:before, .menu-trigger .icon.black:after {
-  background:#000;
+  background: #000;
 }
+
 .menu-trigger .icon.white, .menu-trigger .icon.white:before, .menu-trigger .icon.white:after {
-  background:#fff;
+  background: #fff;
 }
 
 .social-media-sidebar {
@@ -390,25 +525,73 @@ video::-webkit-media-controls {
   right: 0;
   top: 30%;
   background: #fff;
-  display:none;
+  display: none;
 }
+
 .social-media-sidebar fa {
-  color:#000;
+  color: #000;
 }
+
 .social-media-sidebar ul {
-  list-style:none;
+  list-style: none;
   padding: 10px;
   margin-bottom: 0;
 }
+
 .social-media-sidebar ul li {
   font-size: 35px;
   text-align: center;
-  padding: 5px;
+  padding: 3px;
 }
+
 .social-media-sidebar ul li img {
-  max-width:30px;
-  max-height:30px;
+  max-width: 25px;
+  max-height: 25px;
 }
+
 .social-media-sidebar li a:hover {
-  opacity:0.7;
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  .nav-item {
+    bottom: 0px;
+    position: absolute;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.fl-footer-section {
+  .nav-item a, .nav-item h2 {
+    cursor: pointer;
+    color: #333;
+  }
+}
+
+.image img {
+  cursor: pointer;
+}
+
+// Footer stuffs
+.social-media-icons {
+  .images {
+    bottom: 45vh;
+    position: absolute;
+    margin: auto auto;
+    width: 100%;
+  }
+  .explanation {
+    width: 520px;
+    height: auto;
+    top: 40%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  img {
+    height: 65px;
+    width: 65px;
+    margin: 10px;
+  }
 }

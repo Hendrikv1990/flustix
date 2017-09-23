@@ -5,7 +5,7 @@
 // Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
 // Just add your color code here, compile the theme.scss file to change this color everywhere
 $font-family:'Raleway', sans-serif;
-$font-family-sans-serif:Raleway, sans-serif;
+$font-family-sans-serif:'Raleway', sans-serif;
 $brand-primary:         #93C3BB; //#ff6d5a
 $border-width: 1.5px;
 $black: #3F3F3F;
@@ -36,7 +36,10 @@ $social-media-icon-size:40px;
 @mixin p(){
   font-size:$p-size;
   margin-bottom:20px;
-  font-weight:600;
+  font-weight:600!important;
+  span {
+    font-weight:600!important;
+  }
 }
 
 @mixin border-heading() {
@@ -95,9 +98,14 @@ $social-media-icon-size:40px;
   font-weight:bold;
   padding: 12px 40px;
   display: block;
-  width: 200px;
+  width: 240px;
   margin: 0 auto;
   margin-bottom:50px;
+  i {
+    float: right;
+    margin-top: 3px;
+    margin-left: 10px;
+  }
 }
 
 @mixin scrolling_button($color){
@@ -111,7 +119,7 @@ $social-media-icon-size:40px;
   border-radius: 100%;
   display: flex;
   cursor:pointer;
-  margin-top: 50px;
+  margin-top: 10px;
   &:hover {
     opacity:0.8;
   }
@@ -119,9 +127,9 @@ $social-media-icon-size:40px;
 @mixin triangle($color){
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 15px solid $color;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 17px solid $color;
   margin: auto;
 }
 
@@ -130,8 +138,148 @@ $social-media-icon-size:40px;
   font-size:$size;
   margin-bottom:30px;
   text-transform:uppercase;
-  width: 60%;
+  width: 80vw;
   line-height: 38px;
   margin: 0 auto;
   color:#fff;
+}
+
+@mixin carousel_thumbs(){
+  .owl-dot.active, .owl-dot:hover {
+    span {
+      background: $brand-primary;
+    }
+  }
+  .owl-dot{
+    span {
+      background: $black;
+    }
+  }
+
+}
+
+@mixin video_background(){
+
+
+
+
+  .pattern {
+    background-repeat: repeat;
+    background-attachment:scroll;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0
+  }
+
+  .divider {
+    display:block;
+    width:300px;
+    height:35px;
+    margin:10px auto
+  }
+
+
+  #colorize {
+    color:#f1c40f;
+    font-size:40px
+  }
+
+
+
+  /* BIG VIDEO BACKGROUND
+  ================================================== */
+  .big-background {
+    z-index:0;
+    text-align:center;
+    height:100%;
+    min-height:100%;
+    position:relative;
+    overflow:hidden
+  }
+
+  .big-background .big-background-container {
+    padding: 0px 20px;
+    width:830px;
+    max-width:100%;
+    display:inline-block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+    z-index: 10000;
+  }
+
+  .big-background-container p {
+    color: #fff;
+    font-size: 35px;
+    line-height:40px;
+    text-shadow:1px 1px 2px #000;
+    font-family: 'Raleway', sans-serif;
+    -moz-transition: left 1s ease, width 0s ease-out 1s, border-width 0s ease-out 1s;
+    -webkit-transition: left 1s ease, width 0s ease-out 1s, border-width 0s ease-out 1s;
+
+  }
+  .big-background-container p:target {
+    left: 0;
+    width: 100%;
+    border: 1px solid gray;
+    -moz-transition: left 1s ease 0.1s, width 0s ease-out 0.1s, border-width 0s ease-out 0.1s;
+    -webkit-transition: left 1s ease 0.1s, width 0s ease-out 0.1s, border-width 0s ease-out 0.1s;
+  }
+  .big-background-title {
+    color: #fff;
+    font-size: 55px;
+    font-family: 'Raleway', sans-serif;
+    text-transform:uppercase;
+    margin-bottom:10px;
+    font-weight:bold;
+    text-shadow: 1px 1px 20px black;
+  }
+
+  a.big-background-btn {
+    font-size:13px;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:#fff;
+    background:transparent;
+    border:2px solid #fff;
+    padding:10px 14px;
+    cursor:pointer;
+    letter-spacing:2px;
+    text-align:center;
+    display:inline-block;
+    -webkit-transition:.4s background ease;
+    -moz-transition:.4s background ease;
+    -o-transition:.4s background ease;
+    transition:.4s background ease;
+  }
+
+  .big-background-btn:hover {
+    color:#fff;
+    background:rgba(255,255,255,0.20)
+  }
+
+  .big-background-default-image {
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:cover;
+    width:100%;
+    height:100%;
+    z-index:0;
+    backface-visibility:hidden
+  }
+  .scroll-button {
+    color:#fff;
+    border: 4px solid #fff;
+  }
+  .triangle {
+    border-top: 17px solid #fff;
+  }
+
 }

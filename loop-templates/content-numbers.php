@@ -33,10 +33,11 @@ if ( !empty( $images ) ) {
     }
     ?>
     <div class="row">
-        <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ); ?></h1>
+        <div id="numbers" data-numbers="<?php echo get_post_meta( get_the_ID(), $prefix.'head', true ); ?>"></div>
+        <h1 class="main" id="prettyCounter"></h1>
     </div>
         <div class="row">
-        <h1><?php echo get_post_meta( get_the_ID(), $prefix.'overlay-text', true ); ?></h1>
+        <h1 class="sub"><?php echo get_post_meta( get_the_ID(), $prefix.'overlay-text', true ); ?></h1>
         <?php
         ?>
     </div>

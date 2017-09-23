@@ -20,12 +20,50 @@ $container = get_theme_mod( 'understrap_container_type' );
 //    });
 </script>
 <div class="wrapper" id="full-width-page-wrapper">
+    <div class="overlay"></div>
+
+<!--    anchors:['start', 'worum', 'weltweit', 'was', '3-stufen', 'ziel', 'siegel', 'bewerben', 'plastik', 'standards', 'kontakt'],-->
 
 
+    <!-- Sidebar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+            <li>
+                <a href="#start">Home</a>
+            </li>
+            <li>
+                <a href="#worum">Worum geht's</a>
+            </li>
+            <li>
+                <a href="#was">Was ist Flustix</a>
+            </li>
+            <li>
+                <a href="#3-stufen">So funktioniert's</a>
+            </li>
+            <li>
+                <a href="#ziel">Unser Ziel</a>
+            </li>
+            <li>
+                <a href="#bewerben">Siegel</a>
+            </li>
+            <li>
+                <a href="#standards">Unsere Prüfpartner</a>
+            </li>
+            <li>
+                <a href="#kontakt">Kontakt</a>
+            </li>
+        </ul>
+    </nav>
+    <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+        <span class="hamb-top"></span>
+        <span class="hamb-middle"></span>
+        <span class="hamb-bottom"></span>
+        <span class="menu-name">Menu</span>
+    </button>
 
     <div id="fullpage">
-        <div class="section row" id="section0">
-            <?php //echo get_template_part('loop-templates/content', 'video'); ?>
+        <div class="section" id="section0">
+            <?php echo get_template_part('loop-templates/content', 'video'); ?>
         </div>
 <!--        <div class="section" id="section1">-->
 <!--            <div class="slide" id="slide1"><h1>Slide Backgrounds</h1></div>-->

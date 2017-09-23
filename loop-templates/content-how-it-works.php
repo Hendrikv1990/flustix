@@ -18,13 +18,28 @@ $class = $prefix.'section';
         <div class="col-md-6">
             <div class="inner">
 
-            <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ) ?></h1>
-            <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead', true ) ?></h2>
-            <p><?php echo get_post_meta( get_the_ID(), $prefix.'paragraph', true ) ?></p>
+                <h1><?php echo get_post_meta( get_the_ID(), $prefix.'head', true ) ?></h1>
 
-                <a class="fl-button" href="<?php echo get_post_meta( get_the_ID(), $prefix.'button-link', true ) ?>">
-                    <?php echo get_post_meta( get_the_ID(), $prefix.'button-text', true ) ?>
-                </a>
+                <!-- // TODO initialize carousel -->
+                <div class="<?= $prefix ?> owl-carousel owl-theme">
+                    <div class="item">
+                        <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-1', true ) ?></h2>
+                        <?= get_post_meta( get_the_ID(), $prefix.'paragraph-1', true ) ?>
+
+                        <a class="fl-button activate-<?= $prefix ?>" href="#">
+                            <?= get_post_meta( get_the_ID(), $prefix.'button-text-1', true ) ?>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <h2><?php echo get_post_meta( get_the_ID(), $prefix.'subhead-2', true ) ?></h2>
+                        <?= get_post_meta( get_the_ID(), $prefix.'paragraph-2', true ) ?>
+                        <a class="fl-button activate-<?= $prefix ?>" href="#">
+                            <?= get_post_meta( get_the_ID(), $prefix.'button-text-2', true ) ?>
+                        </a>
+                    </div>
+                </div>
+
+
 
 
                 <div class="scroll-button" href="#down">
@@ -46,11 +61,13 @@ $class = $prefix.'section';
             }
         }
 
+        $svg = get_stylesheet_directory_uri() . '/img/graphic-1.svg';
+
         ?>
         <div class="col-md-6 image" style="">
             <!-- // background-image:url('<?php echo $image['url'] ?>'); -->
             <div class="svg">
-            <?php echo file_get_contents($image['url']); ?>
+            <?php echo file_get_contents($svg); ?>
             </div>
 
             <?php

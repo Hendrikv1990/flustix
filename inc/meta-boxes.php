@@ -28,6 +28,7 @@ function fl_get_meta_box( $meta_boxes ) {
                 'name' => esc_html__( 'Video Head', 'metabox-online-generator' ),
             ),
 
+
         ),
     );
 
@@ -163,14 +164,24 @@ function fl_get_meta_box( $meta_boxes ) {
                 'name' => esc_html__( 'How it works Head', 'metabox-online-generator' ),
             ),
             array(
-                'id' => $prefix . 'how-it-works-subhead',
+                'id' => $prefix . 'how-it-works-subhead-1',
                 'type' => 'text',
-                'name' => esc_html__( 'How it works Subhead', 'metabox-online-generator' ),
+                'name' => esc_html__( 'How it works Subhead #1', 'metabox-online-generator' ),
             ),
             array(
-                'id' => $prefix . 'how-it-works-paragraph',
+                'id' => $prefix . 'how-it-works-paragraph-1',
                 'type' => 'wysiwyg',
-                'name' => esc_html__( 'How it works Paragraph', 'metabox-online-generator' ),
+                'name' => esc_html__( 'How it works Paragraph #1', 'metabox-online-generator' ),
+            ),
+            array(
+                'id' => $prefix . 'how-it-works-subhead-2',
+                'type' => 'text',
+                'name' => esc_html__( 'How it works Subhead #2', 'metabox-online-generator' ),
+            ),
+            array(
+                'id' => $prefix . 'how-it-works-paragraph-2',
+                'type' => 'wysiwyg',
+                'name' => esc_html__( 'How it works Paragraph #2', 'metabox-online-generator' ),
             ),
             array(
                 'id' => $prefix . 'how-it-works-image',
@@ -193,13 +204,20 @@ function fl_get_meta_box( $meta_boxes ) {
                 'type' => 'text',
             ),
             array(
-                'id' => $prefix . 'how-it-works-button-text',
-                'name' => esc_html__( 'How it works Button', 'metabox-online-generator' ),
+                'id' => $prefix . 'how-it-works-button-text-1',
+                'name' => esc_html__( 'How it works Button #1', 'metabox-online-generator' ),
+                'desc' => 'button in slide #1',
+                'type' => 'text',
+            ),
+            array(
+                'id' => $prefix . 'how-it-works-button-text-2',
+                'name' => esc_html__( 'How it works Button #2', 'metabox-online-generator' ),
+                'desc' => 'button in slide #2',
                 'type' => 'text',
             ),
             array(
                 'id' => $prefix . 'how-it-works-button-link',
-                'name' => esc_html__( 'How it works Button Link', 'metabox-online-generator' ),
+                'name' => esc_html__( 'How it works Button Link (not used now)', 'metabox-online-generator' ),
                 'type' => 'url',
             ),
         ),
@@ -221,7 +239,12 @@ function fl_get_meta_box( $meta_boxes ) {
                 'name' => esc_html__( 'Goal Head', 'metabox-online-generator' ),
             ),
             array(
-                'id' => $prefix . 'goal-subhead',
+                'id' => $prefix . 'goal-subhead-1',
+                'type' => 'text',
+                'name' => esc_html__( 'Goal Subhead', 'metabox-online-generator' ),
+            ),
+            array(
+                'id' => $prefix . 'goal-subhead-2',
                 'type' => 'text',
                 'name' => esc_html__( 'Goal Subhead', 'metabox-online-generator' ),
             ),
@@ -236,9 +259,14 @@ function fl_get_meta_box( $meta_boxes ) {
                 'name' => esc_html__( 'Goal Paragraph 2', 'metabox-online-generator' ),
             ),
             array(
-                'id' => $prefix . 'goal-paragraph-3',
-                'type' => 'wysiwyg',
-                'name' => esc_html__( 'Goal Paragraph 3', 'metabox-online-generator' ),
+                'id' => $prefix . 'goal-button-text-1',
+                'type' => 'text',
+                'name' => esc_html__( 'Goal Button Text #1', 'metabox-online-generator' ),
+            ),
+            array(
+                'id' => $prefix . 'goal-button-text-2',
+                'type' => 'text',
+                'name' => esc_html__( 'Goal Button Text #2', 'metabox-online-generator' ),
             ),
             array(
                 'id' => $prefix . 'goal-url',
@@ -299,14 +327,35 @@ function fl_get_meta_box( $meta_boxes ) {
                 'name' => esc_html__( 'Certificate Head', 'metabox-online-generator' ),
             ),
             array(
-                'id' => $prefix . 'certificate-subhead',
+                'id' => $prefix . 'certificate-subhead-1',
                 'type' => 'text',
                 'name' => esc_html__( 'Certificate Subhead', 'metabox-online-generator' ),
             ),
             array(
-                'id' => $prefix . 'certificate-paragraph',
+                'id' => $prefix . 'certificate-paragraph-1',
                 'type' => 'wysiwyg',
-                'name' => esc_html__( 'Certificate Paragraph', 'metabox-online-generator' ),
+                'name' => esc_html__( 'Certificate Paragraph 1', 'metabox-online-generator' ),
+            ),
+
+            array(
+                'id' => $prefix . 'certificate-subhead-2',
+                'type' => 'text',
+                'name' => esc_html__( 'Certificate Subhead', 'metabox-online-generator' ),
+            ),
+            array(
+                'id' => $prefix . 'certificate-paragraph-2',
+                'type' => 'wysiwyg',
+                'name' => esc_html__( 'Certificate Paragraph 2', 'metabox-online-generator' ),
+            ),
+            array(
+                'id' => $prefix . 'certificate-slider-button-text-1',
+                'type' => 'text',
+                'name' => esc_html__( 'Slider Button Text #1', 'metabox-online-generator' ),
+            ),
+            array(
+                'id' => $prefix . 'certificate-slider-button-text-2',
+                'type' => 'text',
+                'name' => esc_html__( 'Slider Button Text #2', 'metabox-online-generator' ),
             ),
             array(
                 'id' => $prefix . 'certificate-image',
@@ -348,7 +397,7 @@ function fl_get_meta_box( $meta_boxes ) {
             ),
             array(
                 'id' => $prefix . 'numbers-head',
-                'name' => esc_html__( 'Numbers Head', 'metabox-online-generator' ),
+                'name' => esc_html__( 'Numbers Head ( without decimals )', 'metabox-online-generator' ),
                 'type' => 'text',
             ),
             array(
@@ -375,7 +424,7 @@ function fl_get_meta_box( $meta_boxes ) {
                 'name' => esc_html__( 'Standards Head', 'metabox-online-generator' ),
             ),
             array(
-                'id' => $prefix . 'standards-subhead',
+                'id' => $prefix . 'standards-subhead-1',
                 'type' => 'text',
                 'name' => esc_html__( 'Standards Subhead', 'metabox-online-generator' ),
             ),
@@ -383,16 +432,6 @@ function fl_get_meta_box( $meta_boxes ) {
                 'id' => $prefix . 'standards-paragraph-1',
                 'type' => 'wysiwyg',
                 'name' => esc_html__( 'Standards Paragraph 1', 'metabox-online-generator' ),
-            ),
-            array(
-                'id' => $prefix . 'standards-paragraph-2',
-                'type' => 'wysiwyg',
-                'name' => esc_html__( 'Standards Paragraph 2', 'metabox-online-generator' ),
-            ),
-            array(
-                'id' => $prefix . 'standards-paragraph-3',
-                'type' => 'wysiwyg',
-                'name' => esc_html__( 'Standards Paragraph 3', 'metabox-online-generator' ),
             ),
             array(
                 'id' => $prefix . 'standards-image',
@@ -411,6 +450,42 @@ function fl_get_meta_box( $meta_boxes ) {
             ),
         ),
     );
+
+    // array(
+//    'id' => $prefix . 'standards-subhead-2',
+//                'type' => 'text',
+//                'name' => esc_html__( 'Standards Subhead', 'metabox-online-generator' ),
+//            ),
+//            array(
+//                'id' => $prefix . 'standards-paragraph-2',
+//                'type' => 'wysiwyg',
+//                'name' => esc_html__( 'Standards Paragraph 2', 'metabox-online-generator' ),
+//            ),
+//            array(
+//                'id' => $prefix . 'standards-subhead-3',
+//                'type' => 'text',
+//                'name' => esc_html__( 'Standards Subhead', 'metabox-online-generator' ),
+//            ),
+//            array(
+//                'id' => $prefix . 'standards-paragraph-3',
+//                'type' => 'wysiwyg',
+//                'name' => esc_html__( 'Standards Paragraph 3', 'metabox-online-generator' ),
+//            ),
+//            array(
+//                'id' => $prefix . 'standards-button-text-1',
+//                'type' => 'text',
+//                'name' => esc_html__( 'Button Text #1', 'metabox-online-generator' ),
+//            ),
+//            array(
+//                'id' => $prefix . 'standards-button-text-2',
+//                'type' => 'text',
+//                'name' => esc_html__( 'Button Text #2', 'metabox-online-generator' ),
+//            ),
+//            array(
+//                'id' => $prefix . 'standards-button-text-3',
+//                'type' => 'text',
+//                'name' => esc_html__( 'Button Text #3', 'metabox-online-generator' ),
+//            ),
 
     /// Standards section
     $meta_boxes[] = array(

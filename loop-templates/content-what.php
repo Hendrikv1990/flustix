@@ -19,11 +19,13 @@ $class = $prefix . 'section';
                 <h1><?php echo get_post_meta(get_the_ID(), $prefix . 'head', true) ?></h1>
                 <h2><?php echo get_post_meta(get_the_ID(), $prefix . 'subhead', true) ?></h2>
                 <p><?php echo get_post_meta(get_the_ID(), $prefix . 'paragraph', true) ?></p>
+
+                <div class="scroll-button" href="#down">
+                    <div class="triangle"></div>
+                </div>
             </div>
 
-            <div class="scroll-button" href="#down">
-                <div class="triangle"></div>
-            </div>
+
 
         </div>
         <?php
@@ -48,7 +50,7 @@ $class = $prefix . 'section';
 
             if ( !empty( $images ) ) {
                 foreach ( $images as $image ) {?>
-                    <?php  echo '<a href="', esc_url( $url ), '" title="', esc_attr( $image['title'] ), '"><img src="', esc_url( $image['url'] ), '"  alt="', esc_attr( $image['alt'] ), '"></a>';
+                    <?php  echo '<a data-toggle="modal" data-target="#newsletterModal"><img src="', esc_url( $image['url'] ), '"  alt="', esc_attr( $image['alt'] ), '"></a>';
                 }
             }
 
